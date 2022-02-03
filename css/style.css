@@ -1,0 +1,108 @@
+@import url('reset.css');
+
+body{
+    font-family: Arial,"微軟正黑體";
+}
+
+/*-- 頁首 --*/
+header{
+    background-color: #E1A84C;
+    font-size: 12px;
+    color: white;
+    height: 105px;
+    /* width: 1440px; */
+    position: relative;
+}
+.logo{
+    width: 183px;
+    height: 82px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+li{
+    float: left;
+    padding: 10px;
+}
+/* --- 導覽列 &  搜尋--- */
+.ngb{
+    margin: 0 auto;
+    height: 100px;
+    width: 1100px;
+    
+}
+
+.ngb a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding-top: 35px;
+    text-align: center;
+    /* background-color: black; */
+    width: 150px;
+    height: 50px;
+    
+    
+}
+.searchbox{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.search{
+    width: 240px;
+    height: 40px;
+    
+}
+.inputbtn{
+    position: absolute;
+    width: 40px;
+    height: 45px;
+    right: 10px;
+    top: 10px;
+}
+.inputbtn img{
+    height: 20px;
+    width: 20px;
+}
+
+/* --- 會員區 --- */
+.mb1{
+    position: absolute;
+    right: 100px;
+    top: 10px;
+    margin: 0 10px;
+    padding: 10px;
+}
+.mb2{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+
+
+
+/*-- 動畫 --*/
+.wrapper{
+    background-image: url("../img/store1.jpg");
+    height: 436px;
+    background-repeat: repeat-x;
+}
+
+.wrapper img{
+    width: 375px;
+    height: 286px;
+}
+
+/*-- 頁尾 --*/
+footer{
+    background-color: #E1A84C;
+    font-size: 14px;
+    color: white;
+    /* width: 1440px; */
+}
