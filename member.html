@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BALDI STORE</title>
+		<link rel="stylesheet" href="css/member.css" />
+    </head>
+	<body>
+        <button onclick="showDialog();" class="member"><img src="./img/icon/member.svg" alt="會員登入/註冊" class="mb"/></button>
+        <div id="dialog" class="dialog">
+            <div  onclick="closeDialog();" class="close">X</div>
+            <div class="login">
+                <button class="fb_login"><img src="./img/icon/facebook.png" alt=""><span> Facebook 登入</span></button><br>
+                <button class="google_login"><img src="./img/icon/google.png" alt=""><span> Google 登入</span></button>
+            </div> 
+            <div class="login2">
+                <label for="account">帳號:</label><input type="text" name="account" value="" id="account"><br>
+                <label for="pwd">密碼:</label><input type="text" name="pwd" value="" id="pwd"><br>
+                <input type="checkbox" name="rember" value="記住帳號"><label>記住帳號</label><br>  
+                <button class="login-btn"><span>登入</span></button><br>
+                <a href="#">申辦會員</a>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var dialog;
+        window.onload=function(){
+            dialog=document.getElementById("dialog")
+        };
+        function showDialog(){
+            dialog.style.display="block";
+        };
+        function closeDialog(){
+            dialog.style.display="none";
+        };
+    </script>

@@ -1,0 +1,78 @@
+
+/* --- 會員區 --- */
+
+img{
+    height: 50px;
+    width: 50px;
+}
+.member{
+    border-style: none;
+    background-color: transparent;
+}
+/* --- 彈跳視窗 --- */
+.dialog{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 300px;
+    border: 3px solid white;
+    background-color: #E1A84C;
+    box-shadow: 0 0 10px #E1A84C ;
+    padding: 10px;
+    transform: translate(-120px,0px);
+    display: none;
+}
+.dialog > .close{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+    color: white;
+}
+/* --- FB & Google 登入 --- */
+.login{
+    margin: 0 auto;
+    width: 240px;
+    margin-top: 15px;
+    padding: 10px; 
+}
+.login img{
+    display: inline;
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+}
+.login span{
+    margin: 6px;
+    font-weight: bold;
+}
+.fb_login{
+    width: 240px;
+    display: flex;
+    background-color: #3b5998;
+    color: white;
+    border-color: #3b5998;
+}
+.google_login{
+    width: 240px;
+    display: flex;
+    background-color: #EB4334;
+    color: white;
+    border-color: #EB4334;
+}
+.google_login img{
+    background-color: white;
+    border-radius: 50px;
+}
+/* --- 帳號密碼 --- */
+.login2{
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+.login2 input{
+    margin: 20px;
+} 
+.login-btn{
+    margin: 5px;
+}

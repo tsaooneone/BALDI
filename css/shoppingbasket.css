@@ -1,0 +1,215 @@
+@import url('reset.css');
+body{
+    font-family: Arial,"微軟正黑體";
+    font-size: 16px;
+}
+/*-- 頁首 --*/
+header{
+    background-color: #E1A84C;
+    font-size: 12px;
+    color: white;
+    /* height: 105px; */
+    /* width: 1440px; */
+}
+.logo{
+    width: 180px;
+    height: 80px;
+    margin: 0 30px;
+    
+}
+
+/* --- 導覽列 &  搜尋--- */
+.ngb{
+    height: 105px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.ngb a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.searchbox{
+    position: relative;
+}
+
+.search{
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #E1A84C;
+    padding-left: 10px;
+}
+
+.inputbtn{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    border-style:none ;
+    background-color: transparent;
+}
+
+/* --- 會員區 --- */
+.mb {
+    margin: 0 30px;
+}
+.mb img{
+    height: 50px;
+    width: 50px;
+}
+/* --- 選購商品區 --- */
+.up{
+    width: 1200px;
+    margin: 0 auto;
+    border-bottom: 5px solid black;
+}
+.up > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E1A84C;
+    border-radius: 10px;
+    margin: 30px;
+    font-weight: bold;
+    color: white;
+}
+/*-- 商品img --*/
+.up .commodity{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+.up a{
+    color: white;
+}
+.up span{
+    width: 100px;
+}
+.up .price{
+    font-weight: normal;
+}
+/*-- 加1減1 --*/
+.text{
+    width: 40px;
+    text-align: center;
+    /* border-radius: 5px; */
+}
+.button{
+    background-color: white;
+    border-radius: 3px;
+    border-color: white;
+}
+/*-- 移除的垃圾桶icon --*/
+.up .garbagecan{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+/*-- total --*/
+.total{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 20px;
+}
+.total span{
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+/*-- 付款方式 --*/
+.down{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.down h1{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+}
+.down .pay{
+    margin: 0 30px 10px;
+    padding: 10px;
+    line-height: 1.6;
+    background-color: #E1A84C;
+    border-radius: 10px;
+    display: flex;
+}
+.pay label{
+    margin-top: 45px;
+    color: white;
+}
+.pay input{
+    margin-top: 50px;
+}
+.send{
+    margin: 0 auto;
+}
+.send label{
+    color: white;
+    margin-left: 40px;
+}
+.send input{
+    margin: 10px;
+    width: 200px;
+    border-color: #E1A84C;
+    border-radius: 5px;
+}
+/*-- 買單按鈕 --*/
+.down button{
+    display: block;
+    margin: 0 auto;
+    background-color: #E1A84C;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    border-color: #E1A84C;
+}
+/*-- 頁尾 --*/
+footer{
+    background-color: #E1A84C;
+    font-size: 14px;
+    color: white;
+    height: 120px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*-- 左 --*/
+footer img{
+    width: 180px;
+    height: 80px;
+    margin: 50px;
+}
+
+/*-- 中 --*/
+.boss{
+    margin: 40px;
+    margin-left: 130px;
+}
+
+/*-- 右 --*/
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}
+footer li a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}

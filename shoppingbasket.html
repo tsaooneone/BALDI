@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BALDI STORE</title>
+		<link rel="stylesheet" href="css/shoppingbasket.css" />
+	</head>
+	<body>
+		<!-- 頁首 -->
+		<header>
+			<ul class="ngb">
+				<li>
+					<img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+				</li>
+				<li>
+					<a href="home.html">HOME</a>
+				</li>
+				<li>
+					<a href="food.html">呷88</a>
+				</li>
+				<li>
+					<a href="wear.html">穿漂亮</a>
+				</li>
+				<li>
+					<a href="play.html">開心玩</a>
+				</li>
+				<!-- 搜尋 -->
+				<li class="searchbox">
+					<input type="text" placeholder="Search.." class="search" />
+					<button class="inputbtn"><img src="./img/icon/search.svg" alt="" /></button>
+				</li>
+				<!-- 會員區 -->
+				<li class="mb">
+					<a href="member.html">
+                        <img src="./img/icon/member.svg" alt="會員登入/註冊" class="mb"/>
+                    </a>
+					<a href="shoppingbasket.html">
+                        <img src="./img/icon/shopping-basket.svg" alt="購物籃"/>
+                    </a>
+				</li>
+			</ul>
+		</header>
+        <!-- 選購商品區 -->
+		<section class="up">
+			<div>
+				<img src="./img/food/food3-rebg.png" alt="" class="commodity"/>
+                <a href="">脆脆餅 1000g</a>
+				<span class="price">$ 1000</span> 
+                <!-- 加1減1 -->
+                <div>
+			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
+				    <input type="text" value="1" class="text" />
+				    <input type="button" onclick="calc(this, -1)" value="+" class="button"/>
+                </div>
+                <span>$ 1000</span>
+                <img src="./img/icon/garbage-can_w.png" alt="" class="garbagecan">
+               
+			</div>
+            <div>
+				<img src="./img/toy/toy9-rebg.png" alt="" class="commodity"/>
+				<a href="">牛牛套餐</a>
+				<span class="price">$ 450</span>
+                <!-- 加1減1 -->
+				<div>
+			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
+				    <input type="text" value="1" class="text" />
+				    <input type="button" onclick="calc(this, -1)" value="+" class="button"/>
+                </div>
+                <span>$ 450</span>
+                <img src="./img/icon/garbage-can_w.png" alt="" class="garbagecan">
+			</div>
+            <div>
+				<img src="./img/clothing/green.svg" alt="" class="commodity"/>
+				<a href="">綠色閃電</a>
+				<span class="price">$ 100</span>
+                <!-- 加1減1 -->
+				<div>
+			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
+				    <input type="text" value="1" class="text" />
+				    <input type="button" onclick="calc(this, -1)" value="+" class="button"/>
+                </div>
+                <span>$ 100</span>
+                <img src="./img/icon/garbage-can_w.png" alt="" class="garbagecan">
+			</div>
+		</section>
+        <div class="total">
+            <span>$ 1550</span>
+        </div>
+        <section class="down">
+            <div class="pay">
+                <h1>付款方式</h1>
+                <input type="radio" name="pay" value="pay_a"><label>貨到付款</label><br>
+                <input type="radio" name="pay" value="pay_b"><label>銀行轉帳</label><br>
+                <input type="radio" name="pay" value="pay_c"><label>信用卡/VISA金融卡</label>
+                <div class="send">
+                    <h1>寄送資訊</h1>
+                    <label for="username">收件人姓名:</label><input type="text" id="username" name="username"><br>
+                    <label for="phone_number">收件人電話:</label><input type="text" id="phone_number"><br>
+                    <label for="address">收件人地址:</label><input type="text" id="address" name="address">
+                </div>
+            </div>
+            <button>買單</button>
+        </section>
+		<!-- 頁尾 -->
+		<footer>
+			<!-- 左 -->
+			<img src="./img/logo_w.svg" alt="BALDI" />
+			<!-- 中 -->
+			<div class="boss">
+				<p>BALDI 有狗公司</p>
+				<br />
+				<p>TEL : 2012-1118</p>
+			</div>
+			<!-- 右 -->
+			<ul>
+				<li>
+					<a href="home.html">HOME</a>
+				</li>
+				<br />
+				<li>
+					<a href="food.html">呷88</a>
+				</li>
+				<br />
+				<li>
+					<a href="wear.html">穿漂亮</a>
+				</li>
+				<br />
+				<li>
+					<a href="play.html">開心玩</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BALDI STORE</title>
+		<link rel="stylesheet" href="css/play.css" />
+	</head>
+
+	<body>
+		<!-- 頁首 -->
+		<header>
+			<ul class="ngb">
+				<li>
+					<img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+				</li>
+				<li>
+					<a href="home.html">HOME</a>
+				</li>
+				<li>
+					<a href="food.html">呷88</a>
+				</li>
+				<li>
+					<a href="wear.html">穿漂亮</a>
+				</li>
+				<li>
+					<a href="play.html">開心玩</a>
+				</li>
+				<!-- 搜尋 -->
+				<li class="searchbox">
+					<input type="text" placeholder="Search.." class="search" />
+					<button type="button" class="inputbtn">
+						<img src="./img/icon/search.svg" alt="" />
+					</button>
+				</li>
+				<!-- 會員區 -->
+				<li class="mb">
+					<button onclick="showDialog();" class="member">
+						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
+					</button>
+					<div id="dialog" class="dialog">
+						<div onclick="closeDialog();" class="close">X</div>
+						<div class="login">
+							<button class="fb_login">
+								<img src="./img/icon/facebook.png" alt="" />
+								<span>Facebook 登入</span>
+							</button><br />
+							<button class="google_login">
+								<img src="./img/icon/google.png" alt="" />
+								<span>Google 登入</span>
+							</button>
+						</div>
+						<div class="login2">
+							<label for="account">帳號:</label>
+							<input type="text" name="account" value="" id="account" /><br />
+							<label for="pwd">密碼:</label>
+							<input type="text" name="pwd" value="" id="pwd" /><br />
+							<input type="checkbox" name="rember" value="記住帳號" />
+							<label>記住帳號</label><br />
+							<button class="login-btn"><span>登入</span></button><br />
+							<a href="#">申辦會員</a>
+						</div>
+					</div>
+					<a href="shoppingbasket.html">
+						<img src="./img/icon/shopping-basket.svg" alt="購物籃" class="mbi"/>
+					</a>
+				</li>
+			</ul>
+		</header>
+		<!-- 動畫 -->
+		<section class="wrapper">
+			<img src="./img/shopping car bd3.png" alt="" class="baldicar" />
+		</section>
+		<!-- 玩具&外出用品 -->
+		<h1>玩具</h1>
+		<div class="section">
+			<div class="card">
+				<a href="#"><img src="./img/toy/toy1-rebg.png" alt="" /></a>
+				<p class="name">青蛙呱呱</p>
+				<p class="price">$ 200</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/toy/toy2-rebg.png" alt="" /></a>
+				<p class="name">瘦巴巴河馬</p>
+				<p class="price">$ 200</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/toy/toy3-rebg.png" alt="" /></a>
+				<p class="name">下午茶時光</p>
+				<p class="price">$ 350</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/toy/toy4-rebg.png" alt="" /></a>
+				<p class="name">蔬菜丟丟樂</p>
+				<p class="price">$ 300</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/toy/toy9-rebg.png" alt="" /></a>
+				<p class="name">小牛套餐</p>
+				<p class="price">$ 450</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/toy/toy6-rebg.png" alt="" /></a>
+				<p class="name">巧克力甜甜圈</p>
+				<p class="price">$ 100</p>
+			</div>
+		</div>
+		<h1>外出用品</h1>
+		<div class="section">
+			<div class="card">
+				<a href="#"><img src="./img/go out/bag1-rebg.png" alt="" /></a>
+				<p class="name">好風景背包</p>
+				<p class="price">$ 400</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/go out/bag2-rebg.png" alt="" /></a>
+				<p class="name">替打 大空間</p>
+				<p class="price">$ 690</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/go out/bag3-rebg.png" alt="" /></a>
+				<p class="name">下雨我不怕</p>
+				<p class="price">$ 500</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/go out/botter-rebg.png" alt="" /></a>
+				<p class="name">出門不怕渴</p>
+				<p class="price">$ 290</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/go out/car1-rebg.png" alt="" /></a>
+				<p class="name">公主的移動城堡</p>
+				<p class="price">$ 2500</p>
+			</div>
+			<div class="card">
+				<a href="#"><img src="./img/go out/car2-rebg.png" alt="" /></a>
+				<p class="name">國王的移動城堡</p>
+				<p class="price">$ 3000</p>
+			</div>
+		</div>
+		<!-- 頁尾 -->
+		<footer>
+			<!-- 左 -->
+			<img src="./img/logo_w.svg" alt="BALDI" />
+			<!-- 中 -->
+			<div class="boss">
+				<p>BALDI 有狗公司</p>
+				<br />
+				<p>TEL : 2012-1118</p>
+			</div>
+			<!-- 右 -->
+			<ul>
+				<li>
+					<a href="home.html">HOME</a>
+				</li>
+				<br />
+				<li>
+					<a href="food.html">呷88</a>
+				</li>
+				<br />
+				<li>
+					<a href="wear.html">穿漂亮</a>
+				</li>
+				<br />
+				<li>
+					<a href="play.html">開心玩</a>
+				</li>
+			</ul>
+		</footer>
+
+		<script>
+			var dialog;
+			window.onload=function(){
+				dialog=document.getElementById("dialog")
+			};
+			function showDialog(){
+				dialog.style.display="block";
+			};
+			function closeDialog(){
+				dialog.style.display="none";
+			};
+		</script>
+	</body>
+</html>

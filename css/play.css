@@ -1,0 +1,261 @@
+@import url('./reset.css');
+
+body{
+    font-family: Arial,"微軟正黑體";
+    font-size: 16px;
+}
+/*-- 頁首 --*/
+header{
+    background-color: #E1A84C;
+    font-size: 12px;
+    color: white;
+    /* height: 105px; */
+    /* width: 1440px; */
+}
+.logo{
+    width: 180px;
+    height: 80px;
+    margin: 0 30px;
+    
+}
+
+/* --- 導覽列 &  搜尋--- */
+.ngb{
+    height: 105px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.ngb a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.searchbox{
+    position: relative;
+}
+
+.search{
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #E1A84C;
+    padding-left: 10px;
+}
+
+.inputbtn{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    border-style: none;
+    background-color: transparent;
+}
+
+/* --- 會員區 --- */
+.mb{
+   display: flex;
+}
+.mbi{
+    height: 60px;
+    width: 60px;
+}
+.member{
+    border-style: none;
+    background-color: transparent;
+}
+/* --- 彈跳視窗 --- */
+.dialog{
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    width: 300px;
+    border: 3px solid white;
+    background-color: #E1A84C;
+    box-shadow: 0 0 10px #E1A84C ;
+    padding: 10px;
+    transform: translate(-120px,0px);
+    display: none;
+    z-index: 10000;
+}
+.dialog > .close{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+    color: white;
+}
+/* --- FB & Google 登入 --- */
+.login{
+    margin: 0 auto;
+    width: 240px;
+    margin-top: 15px;
+    padding: 10px; 
+}
+.login img{
+    display: inline;
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+}
+.login span{
+    margin: 6px;
+    font-weight: bold;
+}
+.fb_login{
+    width: 240px;
+    display: flex;
+    background-color: #3b5998;
+    color: white;
+    border-color: #3b5998;
+}
+.google_login{
+    width: 240px;
+    display: flex;
+    background-color: #EB4334;
+    color: white;
+    border-color: #EB4334;
+}
+.google_login img{
+    background-color: white;
+    border-radius: 50px;
+}
+/* --- 帳號密碼 --- */
+.login2{
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+.login2 input{
+    margin: 10px;
+} 
+.login-btn{
+    margin: 5px;
+    background-color: white;
+    border-color: #E1A84C;
+    ;
+}
+/*-- 動畫 --*/
+.wrapper{
+    background-image: url("../img/toy\ store.jpg");
+    height: 400px;
+    background-repeat: repeat-x;
+    position: relative;
+}
+/*-- 飼料、零食 --*/
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-wrap: wrap; 
+    margin: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    margin-top: 70px;
+}
+
+.card{
+    width: 400px;
+    height: 200px;
+    margin-bottom: 80px;
+    margin-top: 30px;
+}
+
+.card a{
+    display: inline-block;
+}
+
+.card a:hover{
+    transform:scale(1.2);
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+    margin-left: 80px;
+}
+.card p{
+    font-weight: bold;
+    line-height: 1.6;
+    display: block;
+    text-align: center;
+    
+}
+.name{
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+.price{
+    font-size: 14px;
+    color: red;
+    
+}
+
+@keyframes baldicar{
+    0%{
+        right: 0px;
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    100%{
+        right: 1400px;
+        opacity: 1;
+    }
+}
+.baldicar{
+    width: 375px;
+    height: 286px;
+    position: absolute;
+    right: -100px;
+    bottom: 30px;
+
+    animation: baldicar 20s linear infinite;
+}
+/*-- 頁尾 --*/
+footer{
+    background-color: #E1A84C;
+    font-size: 14px;
+    color: white;
+    height: 120px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*-- 左 --*/
+footer img{
+    width: 180px;
+    height: 80px;
+    margin: 50px;
+}
+
+/*-- 中 --*/
+.boss{
+    margin: 40px;
+    margin-left: 130px;
+}
+
+/*-- 右 --*/
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}
+footer li a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}

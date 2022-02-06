@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BALDI STORE</title>
+		<link rel="stylesheet" href="css/wear.css" />
+	</head>
+
+	<body>
+		<!-- 頁首 -->
+		<header>
+			<ul class="ngb">
+				<li>
+					<img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+				</li>
+				<li>
+					<a href="home.html">HOME</a>
+				</li>
+				<li>
+					<a href="food.html">呷88</a>
+				</li>
+				<li>
+					<a href="wear.html">穿漂亮</a>
+				</li>
+				<li>
+					<a href="play.html">開心玩</a>
+				</li>
+				<!-- 搜尋 -->
+				<li class="searchbox">
+					<input type="text" placeholder="Search.." class="search" />
+					<button type="button" class="inputbtn">
+						<img src="./img/icon/search.svg" alt="" />
+					</button>
+				</li>
+				<!-- 會員區 -->
+				<li class="mb">
+					<a href="member.html"
+						><img src="./img/icon/member.svg" alt="會員登入/註冊" class="mb"
+					/></a>
+					<a href="shoppingbasket.html"
+						><img src="./img/icon/shopping-basket.svg" alt="購物籃"
+					/></a>
+				</li>
+			</ul>
+		</header>
+
+        <section class="top">
+            <!-- (左)更衣室 -->
+            <div class="room">
+                <img src="./img/Dogmodel.svg" alt="">
+                <!-- (右)資訊欄 -->
+                <div class="info">
+                    <h1>藍色小星星</h1>
+                    <p> 胸圍 : 15 cm</p>
+                    <p> 背長 : 30 cm</p>
+                    <p> 材質 : 純棉</p>
+                    <!-- size選單 -->
+                    <select name="size" id="">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <br>
+                    <!-- 加1減1 -->
+                    <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
+                    <input type="text" value="1" class="text"/>
+                    <input type="button" onclick="calc(this, -1)" value="+" class="button" />
+                    <!-- 價錢 -->
+                    <p class="price">$ 200</p>
+                    <!-- 加入購物車 -->
+                    <input type="button" value="加入購物車" class="button">
+                </div>
+            </div>
+        </section>
+        <section class="main">
+            <div class="swiper-slide">
+                <img src="./img/clothing/b.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/clothing/f.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/clothing/gf.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/clothing/green.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/clothing/r.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/clothing/ry.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/clothing/s.svg" alt="">
+            </div>
+        </section>
+        <!-- 頁尾 -->
+		<footer>
+			<!-- 左 -->
+			<img src="./img/logo_w.svg" alt="BALDI" />
+			<!-- 中 -->
+			<div class="boss">
+				<p>BALDI 有狗公司</p>
+				<br />
+				<p>TEL : 2012-1118</p>
+			</div>
+			<!-- 右 -->
+			<ul>
+				<li>
+					<a href="home.html">HOME</a>
+				</li>
+				<br />
+				<li>
+					<a href="food.html">呷88</a>
+				</li>
+				<br />
+				<li>
+					<a href="wear.html">穿漂亮</a>
+				</li>
+				<br />
+				<li>
+					<a href="play.html">開心玩</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
