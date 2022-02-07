@@ -5,6 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>BALDI STORE</title>
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/header_footer.css">
 		<link rel="stylesheet" href="css/food.css" />
 	</head>
 
@@ -15,33 +17,56 @@
 				<li>
 					<img src="./img/logo_w.svg" alt="BALDI" class="logo" />
 				</li>
-				<li>
+				<li class="ngb_list">
 					<a href="home.html">HOME</a>
 				</li>
-				<li>
+				<li class="ngb_list">
 					<a href="food.html">呷88</a>
 				</li>
-				<li>
+				<li class="ngb_list">
 					<a href="wear.html">穿漂亮</a>
 				</li>
-				<li>
+				<li class="ngb_list">
 					<a href="play.html">開心玩</a>
 				</li>
 				<!-- 搜尋 -->
 				<li class="searchbox">
-					<input type="text" class="search" />
-					<button class="inputbtn">
+					<input type="text" placeholder="Search.." class="search" />
+					<button type="button" class="inputbtn">
 						<img src="./img/icon/search.svg" alt="" />
 					</button>
 				</li>
 				<!-- 會員區 -->
 				<li class="mb">
-					<a href="member.html"
-						><img src="./img/icon/member.svg" alt="會員登入/註冊" class="mb"
-					/></a>
-					<a href="shoppingbasket.html"
-						><img src="./img/icon/shopping-basket.svg" alt="購物籃"
-					/></a>
+					<button onclick="showDialog();" class="member">
+						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
+					</button>
+					<div id="dialog" class="dialog">
+						<div onclick="closeDialog();" class="close">X</div>
+						<div class="login">
+							<button class="fb_login">
+								<img src="./img/icon/facebook.png" alt="" />
+								<span>Facebook 登入</span>
+							</button><br />
+							<button class="google_login">
+								<img src="./img/icon/google.png" alt="" />
+								<span>Google 登入</span>
+							</button>
+						</div>
+						<div class="login2">
+							<label for="account">帳號:</label>
+							<input type="text" name="account" value="" id="account" /><br />
+							<label for="pwd">密碼:</label>
+							<input type="text" name="pwd" value="" id="pwd" /><br />
+							<input type="checkbox" name="rember" value="記住帳號" />
+							<label>記住帳號</label><br />
+							<button class="login-btn"><span>登入</span></button><br />
+							<a href="#">申辦會員</a>
+						</div>
+					</div>
+					<a href="shoppingbasket.html">
+						<img src="./img/icon/shopping-basket.svg" alt="購物籃" class="mbi"/>
+					</a>
 				</li>
 			</ul>
 		</header>
@@ -145,5 +170,19 @@
 				</li>
 			</ul>
 		</footer>
+
+		<!-- Js -->
+		<script>
+			var dialog;
+			window.onload=function(){
+				dialog=document.getElementById("dialog")
+			};
+			function showDialog(){
+				dialog.style.display="block";
+			};
+			function closeDialog(){
+				dialog.style.display="none";
+			};
+		</script>
 	</body>
 </html>

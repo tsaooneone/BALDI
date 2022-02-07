@@ -1,3 +1,4 @@
+@import url('./reset.css');
 /*-- (左)更衣室 --*/
 .room{
     width: 1200px;
@@ -78,8 +79,6 @@ option{
     width: 100%;
     height: 100%;
 }
-
-/* 衣服3D輪播 */
 /* 左3 */
 #s1:checked ~ #slide5, #s2:checked ~ #slide6,
 #s3:checked ~ #slide7, #s4:checked ~ #slide1,
@@ -135,4 +134,80 @@ option{
 #s7:checked ~ #slide3{
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
     transform: translate3d(600px,0,-300px);
+}
+
+/* 店長推薦 */
+.mg{
+    /* text-align: left; */
+    font-size: 24px;
+    color: #E1A84C;
+    font-weight: bold;
+    margin: 15px 0 0 250px;
+}
+.mg img{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+.recommend{
+    margin: 20px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+[type=radio]{
+    display: none;
+}
+.recommend label{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.recommend img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 左2 */
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3{
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(-400px,0,-200px);
+}
+/* 左1 */
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4{
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,.3),0 2px 2px 0 rgba(0,0,0,.2);
+    transform: translate3d(-200px,0,-100px);
+}
+/* 中間 */
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5{
+    box-shadow: 0 13px 25px 0 rgba(0,0,0,.3),0 11px 7px 0 rgba(0,0,0,.19);
+    transform: translate3d(0,0,0);
+}
+/* 右1 */
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1{
+    box-shadow: 0 6px 10px rgba(0,0,0,.3),0 2px 2px 0 rgba(0,0,0,.2);
+    transform: translate3d(200px,0,-100px);
+}
+/* 右2 */
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2{
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(400px,0,-200px);
 }

@@ -1,0 +1,78 @@
+/* 展示圖 */
+.show{
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.show img{
+    width: 270px;
+    height: 270px;
+}
+/*-- (右)資訊欄 --*/
+.info{
+    width: 200px;
+    padding: 10px;
+    
+    line-height: 1.6;
+}
+.info h1{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.info p{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+/*-- 加1減1 --*/
+.text{
+    width: 40px;
+    text-align: center;
+}
+.button{
+    background-color: #E1A84C;
+    border-radius: 5px;
+    border-color: #E1A84C;
+}
+/*-- 價錢 --*/
+.info .price{
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+}
+/* 店長推薦專區 */
+.recommend{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.mg{
+    font-size: 24px;
+    color: #E1A84C;
+    font-weight: bold;
+    margin: 20px 0 0 250px;
+}
+.mg img{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+.card{
+    height: 200px;
+    margin-bottom: 10px;
+}
+.card a{
+    display: inline-block;
+}
+
+.card img{
+    margin-left: 60px;
+    width: 150px;
+    height: 150px;
+}
+.card a:hover{
+    transform:scale(1.2);
+}
