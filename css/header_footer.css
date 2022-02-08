@@ -75,6 +75,7 @@ header{
  .member{
      border-style: none;
      background-color: transparent;
+     cursor: pointer;
  }
  /* --- 彈跳視窗 --- */
  .dialog{
@@ -149,6 +150,10 @@ header{
      border-color: #E1A84C;
      ;
  }
+/*-- 內容 --*/
+h1{
+    color: #E1A84C;
+}
 /*-- 頁尾 --*/
 footer{
     background-color: #E1A84C;
