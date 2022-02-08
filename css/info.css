@@ -40,7 +40,7 @@
 /*-- 價錢 --*/
 .info .price{
     color: red;
-    font-size: 18px;
+    /* font-size: 18px; */
     margin-top: 10px;
 }
 /* 店長推薦專區 */

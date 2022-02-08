@@ -6,7 +6,7 @@ body{
 /*-- 頁首 --*/
 header{
     background-color: #E1A84C;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: bold;
     color: white;
 }
@@ -29,7 +29,7 @@ header{
     display: inline-block;
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
 }
 
@@ -152,7 +152,7 @@ header{
 /*-- 頁尾 --*/
 footer{
     background-color: #E1A84C;
-    font-size: 14px;
+    /* font-size: 14px; */
     color: white;
     height: 120px;
     font-weight: bold;

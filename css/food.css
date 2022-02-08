@@ -72,12 +72,12 @@ h1{
     
 }
 .name{
-    font-size: 18px;
+    /* font-size: 18px; */
     color: black;
     margin-top: 10px;
 }
 .price{
-    font-size: 14px;
+    /* font-size: 14px; */
     color: red;
     
 }
