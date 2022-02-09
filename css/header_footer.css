@@ -78,6 +78,17 @@ header{
      cursor: pointer;
  }
  /* --- 彈跳視窗 --- */
+ .popup{
+     height: 100vh;
+     position: absolute;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     background-color: rgba(0 , 0, 0, .5);
+     display: none;
+     z-index: 888;
+ }
  .dialog{
      position: fixed;
      top: 200px;
@@ -89,8 +100,7 @@ header{
      box-shadow: 0 0 20px black ;
      padding: 10px;
      transform: translate(-120px,0px);
-     display: none;
-     z-index: 10000;
+     overflow: hidden;
  }
  .dialog > .close{
      position: absolute;

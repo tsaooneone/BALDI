@@ -40,6 +40,7 @@
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
+					<div id="popup" onclick="closeDialog();" class="popup">
 					<div id="dialog" class="dialog">
 						<div onclick="closeDialog();" class="close">X</div>
 						<div class="login">
@@ -63,6 +64,7 @@
 							<a href="#">申辦會員</a>
 						</div>
 					</div>
+				</div>
 					<a href="shoppingbasket.html">
 						<img src="./img/icon/shopping-basket.svg" alt="購物籃" class="mbi"/>
 					</a>
@@ -203,16 +205,16 @@
 		
 		<script>
 		// 會員
-			var dialog;
+			var popup;
 			window.onload=function(){
-				dialog=document.getElementById("dialog")
+				popup=document.getElementById("popup")
 			};
 			function showDialog(){
-				dialog.style.display="block";
-			};
+				popup.style.display="block";
+			}
 			function closeDialog(){
-				dialog.style.display="none";
-			};	
+				popup.style.display="none";
+			}
 		</script>
 		       
 				
