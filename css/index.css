@@ -1,11 +1,65 @@
 /*-- 動畫 --*/
 .wrapper{
-    background-image: url("../img/store1.jpg");
-    height: 436px;
-    background-repeat: repeat-x;
+    background-image: url("../img/store7.jpg");
+    height: 560px;
+    background-size: 100%;
+    background-repeat: no-repeat;
     position: relative;
 }
 
+.wrapper a{
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.toy1{
+    width: 200px;
+    position: absolute;
+    top: 80px;
+    left: 210px;
+
+    animation: shake 4s linear infinite;
+}
+@keyframes shake{
+    10%, 90%{transform: rotate(30deg);}
+    20%, 80%{transform: rotate(-30deg);}
+    30%, 70%{transform: rotate(30deg);}
+    40%, 60%{transform: rotate(-30deg);}
+    50%{transform: translate(0.5px);}
+}
+.toy1 img{
+    width: 200px;
+}
+.toy1:hover img{
+    transform: rotate(-45deg);
+}
+.toy6{
+    width: 160px;
+    position: absolute;
+    top: 50px;
+    left: 550px;
+}
+.toy6 img{
+    width: 160px;
+}
+.toy3{
+    width: 200px;
+    position: absolute;
+    top: 80px;
+    left: 350px;
+}
+.toy3 img{
+    width: 200px;
+}
+.toy8{
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 650px;
+} 
+.toy8 img{
+    width: 200px;
+}
 @keyframes baldicar{
     0%{
         right: 0px;
@@ -55,26 +109,23 @@ h1 img{
     background-size: cover;
     width: 300px;
     height: 200px;
-    margin-bottom: 30px;
-}
-.door{
-    background-image: url("/img/door.svg.jpg");
-    background-repeat: no-repeat;
-    
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    top: auto;
-    left: auto;
+    margin-bottom: 70px;
+    text-align: center;
 }
 .card a{
     display: inline-block;
 }
 
 .card img{
-    margin-left: 70px;
     width: 200px;
-    height: 200px;
+}
+.card p{
+    font-weight: bold;
+    line-height: 1.6;
+    display: block;
+}
+.name{
+    margin-top: 10px;
 }
 .card a:hover{
     transform:scale(1.3);

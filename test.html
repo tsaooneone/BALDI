@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>BALDI STORE</title>
 		<link rel="stylesheet" href="css/test.css" />
-		<link rel="stylesheet" href="./css/header_footer.css">
+		<link rel="stylesheet" href="./css/header_footer.css" />
 	</head>
 
 	<body>
@@ -14,10 +14,10 @@
 		<header>
 			<ul class="ngb">
 				<li>
-					<img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+					<a href="index.html"></a><img src="./img/logo_w.svg" alt="BALDI" class="logo" />
 				</li>
 				<li class="ngb_list">
-					<a href="home.html">HOME</a>
+					<a href="index.html">HOME</a>
 				</li>
 				<li class="ngb_list">
 					<a href="food.html">呷88</a>
@@ -40,107 +40,120 @@
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
-					<div id="popup" onclick="closeDialog();" class="popup">
-					<div id="dialog" class="dialog">
-						<div onclick="closeDialog();" class="close">X</div>
-						<div class="login">
-							<button class="fb_login">
-								<img src="./img/icon/facebook.png" alt="" />
-								<span>Facebook 登入</span>
-							</button><br />
-							<button class="google_login">
-								<img src="./img/icon/google.png" alt="" />
-								<span>Google 登入</span>
-							</button>
-						</div>
-						<div class="login2">
-							<label for="account">帳號:</label>
-							<input type="text" name="account" value="" id="account" /><br />
-							<label for="pwd">密碼:</label>
-							<input type="text" name="pwd" value="" id="pwd" /><br />
-							<input type="checkbox" name="rember" value="記住帳號" />
-							<label>記住帳號</label><br />
-							<button class="login-btn"><span>登入</span></button><br />
-							<a href="#">申辦會員</a>
+					<div id="popup"  onclick="closeDialog();" class="popup">
+						<div id="dialog" class="dialog">
+							<div onclick="closeDialog();" class="close">X</div>
+							<div class="login">
+								<button class="fb_login">
+									<img src="./img/icon/facebook.png" alt="" />
+									<span>Facebook 登入</span></button
+								><br />
+								<button class="google_login">
+									<img src="./img/icon/google.png" alt="" />
+									<span>Google 登入</span>
+								</button>
+							</div>
+							<div class="login2">
+								<label for="account">帳號:</label>
+								<input type="text" name="account" value="" id="account" /><br />
+								<label for="pwd">密碼:</label>
+								<input type="text" name="pwd" value="" id="pwd" /><br />
+								<input type="checkbox" name="rember" value="記住帳號" />
+								<label>記住帳號</label><br />
+								<button class="login-btn"><span>登入</span></button><br />
+								<a href="#">申辦會員</a>
+							</div>
 						</div>
 					</div>
-				</div>
 					<a href="shoppingbasket.html">
-						<img src="./img/icon/shopping-basket.svg" alt="購物籃" class="mbi"/>
+						<img
+							src="./img/icon/shopping-basket.svg"
+							alt="購物籃"
+							class="mbi"
+						/>
 					</a>
 				</li>
 			</ul>
 		</header>
 
-        <section class="top">
-            <!-- (左)更衣室 -->
-            <div class="room">
-                <img src="./img/Dogmodel.svg" alt="">
-                <!-- (右)資訊欄 -->
-                <div class="info">
-                    <h1>藍色小星星</h1>
-                    <p> 胸圍 : 15 cm</p>
-                    <p> 背長 : 30 cm</p>
-                    <p> 材質 : 純棉</p>
-                    <!-- size選單 -->
-                    <select name="size" id="">
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                    </select>
-                    <br>
-                    <!-- 加1減1 -->
-                    <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
-                    <input type="text" value="1" class="text"/>
-                    <input type="button" onclick="calc(this, -1)" value="+" class="button" />
-                    <!-- 價錢 -->
-                    <p class="price">$ 200</p>
-                    <!-- 加入購物車 -->
-                    <input type="button" value="加入購物車" class="button">
-                </div>
-            </div>
-        </section>
+		<section class="top">
+			<!-- (左)更衣室 -->
+			<div class="room">
+				<img src="./img/Dogmodel.svg" alt="" />
+				<!-- (右)資訊欄 -->
+				<div class="info">
+					<h1>藍色小星星</h1>
+					<p>胸圍 : 15 cm</p>
+					<p>背長 : 30 cm</p>
+					<p>材質 : 純棉</p>
+					<!-- size選單 -->
+					<select name="size" id="">
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+					</select>
+					<br />
+					<!-- 加1減1 -->
+					<input
+						type="button"
+						onclick="calc(this, 1)"
+						value="-"
+						class="button"
+					/>
+					<input type="text" value="1" class="text" />
+					<input
+						type="button"
+						onclick="calc(this, -1)"
+						value="+"
+						class="button"
+					/>
+					<!-- 價錢 -->
+					<p class="price">$ 200</p>
+					<!-- 加入購物車 -->
+					<input type="button" value="加入購物車" class="button" />
+				</div>
+			</div>
+		</section>
 		<!-- 衣服 -->
 		<section id="slider">
-			<input type="radio" name="slider" id="s1">
-			<input type="radio" name="slider" id="s2">
-			<input type="radio" name="slider" id="s3">
-			<input type="radio" name="slider" id="s4" checked>
-			<input type="radio" name="slider" id="s5">
-            <input type="radio" name="slider" id="s6">
-            <input type="radio" name="slider" id="s7">
-		
+			<input type="radio" name="slider" id="s1" />
+			<input type="radio" name="slider" id="s2" />
+			<input type="radio" name="slider" id="s3" />
+			<input type="radio" name="slider" id="s4" checked />
+			<input type="radio" name="slider" id="s5" />
+			<input type="radio" name="slider" id="s6" />
+			<input type="radio" name="slider" id="s7" />
+
 			<label for="s1" id="slide1">
-				<img src="./img/clothing/1.svg" alt="">
+				<img src="./img/clothing/1.svg" alt="" />
 			</label>
 
 			<label for="s2" id="slide2">
-				<img src="./img/clothing/2.svg" alt="">
+				<img src="./img/clothing/2.svg" alt="" />
 			</label>
 
 			<label for="s3" id="slide3">
-				<img src="./img/clothing/3.svg" alt="">
+				<img src="./img/clothing/3.svg" alt="" />
 			</label>
 
 			<label for="s4" id="slide4">
-				<img src="./img/clothing/4.svg" alt="">
+				<img src="./img/clothing/4.svg" alt="" />
 			</label>
 
 			<label for="s5" id="slide5">
-				<img src="./img/clothing/5.svg" alt="">
+				<img src="./img/clothing/5.svg" alt="" />
 			</label>
 
-            <label for="s6" id="slide6">
-				<img src="./img/clothing/6.svg" alt="">
+			<label for="s6" id="slide6">
+				<img src="./img/clothing/6.svg" alt="" />
 			</label>
 
-            <label for="s7" id="slide7">
-				<img src="./img/clothing/7.svg" alt="">
+			<label for="s7" id="slide7">
+				<img src="./img/clothing/7.svg" alt="" />
 			</label>
+		</section>
 
-        </section>
-        
-        <!-- 頁尾 -->
+		<!-- 頁尾 -->
 		<footer>
 			<!-- 左 -->
 			<img src="./img/logo_w.svg" alt="BALDI" />
@@ -171,7 +184,7 @@
 		</footer>
 
 		<!-- 店長推薦專區 -->
-			   <!-- <h1 class="mg">店長推薦<img src="./baldi manager.png" alt=""></h1>
+		<!-- <h1 class="mg">店長推薦<img src="./baldi manager.png" alt=""></h1>
 			   <section class="recommend">
 					   <input type="radio" name="slider" id="s1">
 					   <input type="radio" name="slider" id="s2">
@@ -202,24 +215,22 @@
 			    -->
 
 		<!-- Js -->
-		
+
 		<script>
-		// 會員
-			var popup;
-			window.onload=function(){
-				popup=document.getElementById("popup")
-			};
-			function showDialog(){
-				popup.style.display="block";
-			}
-			function closeDialog(){
-				popup.style.display="none";
-			}
+			// 會員
+				var popup;
+				window.onload=function(){
+					popup=document.getElementById("popup")
+				};
+				function showDialog(){
+					popup.style.display="block";
+				}
+				function closeDialog(){
+					if(event.trget == popup){
+					popup.style.display="none";
+					}
+				}
+				
 		</script>
-		       
-				
-				
 	</body>
 </html>
-
-

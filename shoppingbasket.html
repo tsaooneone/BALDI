@@ -7,7 +7,8 @@
 		<title>BALDI STORE</title>
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/header_footer.css">
-		<link rel="stylesheet" href="css/shoppingbasket.css" />
+		<link rel="stylesheet" href="css/shoppingbasket.css"/>
+		<link rel="icon" href="./img/icon/title icon2-2.ico"/>
 	</head>
 	<body>
 		<!-- 頁首 -->
@@ -38,27 +39,29 @@
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
-					<div id="dialog" class="dialog">
-						<div onclick="closeDialog();" class="close">X</div>
-						<div class="login">
-							<button class="fb_login">
-								<img src="./img/icon/facebook.png" alt="" />
-								<span>Facebook 登入</span>
-							</button><br />
-							<button class="google_login">
-								<img src="./img/icon/google.png" alt="" />
-								<span>Google 登入</span>
-							</button>
-						</div>
-						<div class="login2">
-							<label for="account">帳號:</label>
-							<input type="text" name="account" value="" id="account" /><br />
-							<label for="pwd">密碼:</label>
-							<input type="text" name="pwd" value="" id="pwd" /><br />
-							<input type="checkbox" name="rember" value="記住帳號" />
-							<label>記住帳號</label><br />
-							<button class="login-btn"><span>登入</span></button><br />
-							<a href="#">申辦會員</a>
+					<div id="popup"  onclick="closeDialog();" class="popup">
+						<div id="dialog" class="dialog">
+							<div onclick="closeDialog();" class="close">X</div>
+							<div class="login">
+								<button class="fb_login">
+									<img src="./img/icon/facebook.png" alt="" />
+									<span>Facebook 登入</span></button
+								><br />
+								<button class="google_login">
+									<img src="./img/icon/google.png" alt="" />
+									<span>Google 登入</span>
+								</button>
+							</div>
+							<div class="login2">
+								<label for="account">帳號:</label>
+								<input type="text" name="account" value="" id="account" /><br />
+								<label for="pwd">密碼:</label>
+								<input type="text" name="pwd" value="" id="pwd" /><br />
+								<input type="checkbox" name="rember" value="記住帳號" />
+								<label>記住帳號</label><br />
+								<button class="login-btn"><span>登入</span></button><br />
+								<a href="#">申辦會員</a>
+							</div>
 						</div>
 					</div>
 					<a href="shoppingbasket.html">
@@ -70,9 +73,11 @@
         <!-- 選購商品區 -->
 		<section class="up">
 			<div>
-				<img src="./img/food/food3-rebg.png" alt="" class="commodity"/>
-                <a href="">脆脆餅 1000g</a>
+				<img src="./img/food/food5.png" alt="" class="commodity"/>
+				<div class="shangpin">
+				<a href="">脆脆餅 1000g</a>
 				<span class="price">$ 1000</span> 
+				</div>
                 <!-- 加1減1 -->
                 <div>
 			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
@@ -84,9 +89,11 @@
                
 			</div>
             <div>
-				<img src="./img/toy/toy9-rebg.png" alt="" class="commodity"/>
+				<img src="./img/toy/toy5.png" alt="" class="commodity"/>
+				<div class="shangpin">
 				<a href="info.html">小牛套餐</a>
 				<span class="price">$ 450</span>
+				</div>
                 <!-- 加1減1 -->
 				<div>
 			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
@@ -97,9 +104,11 @@
                 <img src="./img/icon/garbage-can_w.png" alt="" class="garbagecan">
 			</div>
             <div>
-				<img src="./img/clothing/4.svg" alt="" class="commodity"/>
+				<img src="./img/clothing/4.png" alt="" class="commodity"/>
+				<div class="shangpin">
 				<a href="">綠色閃電</a>
 				<span class="price">$ 100</span>
+				</div>
                 <!-- 加1減1 -->
 				<div>
 			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
@@ -160,16 +169,22 @@
 
 		<!-- Js -->
 		<script>
-			var dialog;
-			window.onload=function(){
-				dialog=document.getElementById("dialog")
+			//登入視窗展開關閉
+			var popup;
+			window.onload = function () {
+				popup = document.getElementById("popup");
+				// console.log(popup);
 			};
-			function showDialog(){
-				dialog.style.display="block";
-			};
-			function closeDialog(){
-				dialog.style.display="none";
-			};
+			function showDialog() {
+				popup.style.display = "block";
+			}
+			function closeDialog() {
+				popup.style.display = "none";
+			// 	$("#dialog").mousedown(function (e) {
+			// 	var e = event || window.event;
+			// 	event.stopPropagation();
+			// });
+			}
 		</script>
 	</body>
 </html>

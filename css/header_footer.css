@@ -2,7 +2,14 @@ body{
     font-family: Arial,"微軟正黑體";
     font-size: 16px;
 }
-
+ h1{
+     font-size: 24px;
+     color: #E1A84C;
+     font-weight: bold;
+ }
+ .price{
+     color: red;
+ }
 /*-- 頁首 --*/
 header{
     background-color: #E1A84C;

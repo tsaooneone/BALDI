@@ -1,6 +1,6 @@
 /* --- 選購商品區 --- */
 .up{
-    width: 1200px;
+    width: 900px;
     margin: 0 auto;
     border-bottom: 5px solid black;
 }
@@ -17,25 +17,27 @@
 /*-- 商品img --*/
 .up .commodity{
     width: 150px;
-    height: 150px;
     background-color: white;
     border-radius: 10px;
     margin: 10px;
     padding: 5px;
 }
-.up a{
-    color: white;
+.shangpin{
+    width: 200px;
 }
-.up span{
-    width: 100px;
+.shangpin a{
+    color: white;
 }
 .up .price{
     font-weight: normal;
+    color: white;
+    margin-left: 10px;
 }
 /*-- 加1減1 --*/
 .text{
     width: 40px;
     text-align: center;
+    border-style: none;
     /* border-radius: 5px; */
 }
 .button{
@@ -51,7 +53,7 @@
 }
 /*-- total --*/
 .total{
-    width: 1000px;
+    width: 900px;
     margin: 0 auto;
     text-align: right;
     padding: 20px;
@@ -60,10 +62,11 @@
     font-size: 18px;
     color: red;
     font-weight: bold;
+    margin: 80px;
 }
 /*-- 付款方式 --*/
 .down{
-    width: 1200px;
+    width: 900px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -98,7 +101,7 @@
 .send input{
     margin: 10px;
     width: 200px;
-    border-color: #E1A84C;
+    border-style: none;
     border-radius: 5px;
 }
 /*-- 買單按鈕 --*/

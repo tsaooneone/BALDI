@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/header_footer.css">
 		<link rel="stylesheet" href="css/play.css" />
+		<link rel="icon" href="./img/icon/title icon2-2.ico"/>
 	</head>
 
 	<body>
@@ -41,27 +42,29 @@
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
-					<div id="dialog" class="dialog">
-						<div onclick="closeDialog();" class="close">X</div>
-						<div class="login">
-							<button class="fb_login">
-								<img src="./img/icon/facebook.png" alt="" />
-								<span>Facebook 登入</span>
-							</button><br />
-							<button class="google_login">
-								<img src="./img/icon/google.png" alt="" />
-								<span>Google 登入</span>
-							</button>
-						</div>
-						<div class="login2">
-							<label for="account">帳號:</label>
-							<input type="text" name="account" value="" id="account" /><br />
-							<label for="pwd">密碼:</label>
-							<input type="text" name="pwd" value="" id="pwd" /><br />
-							<input type="checkbox" name="rember" value="記住帳號" />
-							<label>記住帳號</label><br />
-							<button class="login-btn"><span>登入</span></button><br />
-							<a href="#">申辦會員</a>
+					<div id="popup"  onclick="closeDialog();" class="popup">
+						<div id="dialog" class="dialog">
+							<div onclick="closeDialog();" class="close">X</div>
+							<div class="login">
+								<button class="fb_login">
+									<img src="./img/icon/facebook.png" alt="" />
+									<span>Facebook 登入</span></button
+								><br />
+								<button class="google_login">
+									<img src="./img/icon/google.png" alt="" />
+									<span>Google 登入</span>
+								</button>
+							</div>
+							<div class="login2">
+								<label for="account">帳號:</label>
+								<input type="text" name="account" value="" id="account" /><br />
+								<label for="pwd">密碼:</label>
+								<input type="text" name="pwd" value="" id="pwd" /><br />
+								<input type="checkbox" name="rember" value="記住帳號" />
+								<label>記住帳號</label><br />
+								<button class="login-btn"><span>登入</span></button><br />
+								<a href="#">申辦會員</a>
+							</div>
 						</div>
 					</div>
 					<a href="shoppingbasket.html">
@@ -78,32 +81,32 @@
 		<h1>玩具</h1>
 		<div class="section">
 			<div class="card">
-				<a href="#"><img src="./img/toy/toy1-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/toy/toy1.png" alt="" /></a>
 				<p class="name">青蛙呱呱</p>
 				<p class="price">$ 200</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/toy/toy2-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/toy/toy2.png" alt="" /></a>
 				<p class="name">瘦巴巴河馬</p>
 				<p class="price">$ 200</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/toy/toy3-rebg.png" alt="" /></a>
-				<p class="name">下午茶時光</p>
-				<p class="price">$ 350</p>
+				<a href="#"><img src="./img/toy/toy3.png" alt="" /></a>
+				<p class="name">咕咕雞</p>
+				<p class="price">$ 100</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/toy/toy4-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/toy/toy4.png" alt="" /></a>
 				<p class="name">蔬菜丟丟樂</p>
 				<p class="price">$ 300</p>
 			</div>
 			<div class="card">
-				<a href="info.html"><img src="./img/toy/toy9-rebg.png" alt="" /></a>
+				<a href="info.html"><img src="./img/toy/toy5.png" alt="" /></a>
 				<p class="name">小牛套餐</p>
 				<p class="price">$ 450</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/toy/toy6-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/toy/toy6.png" alt="" /></a>
 				<p class="name">巧克力甜甜圈</p>
 				<p class="price">$ 100</p>
 			</div>
@@ -111,32 +114,32 @@
 		<h1>外出用品</h1>
 		<div class="section">
 			<div class="card">
-				<a href="#"><img src="./img/go out/bag1-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/go out/bag1.png" alt="" /></a>
 				<p class="name">好風景背包</p>
 				<p class="price">$ 400</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/bag2-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/go out/bag2.png" alt="" /></a>
 				<p class="name">替打 大空間</p>
 				<p class="price">$ 690</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/bag3-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/go out/bag3.png" alt="" /></a>
 				<p class="name">下雨我不怕</p>
 				<p class="price">$ 500</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/botter-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/go out/botter.png" alt="" /></a>
 				<p class="name">出門不怕渴</p>
 				<p class="price">$ 290</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/car1-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/go out/car1.png" alt="" /></a>
 				<p class="name">公主的移動城堡</p>
 				<p class="price">$ 2500</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/car2-rebg.png" alt="" /></a>
+				<a href="#"><img src="./img/go out/car2.png" alt="" /></a>
 				<p class="name">國王的移動城堡</p>
 				<p class="price">$ 3000</p>
 			</div>
@@ -173,16 +176,22 @@
 
 		<!-- Js -->
 		<script>
-			var dialog;
-			window.onload=function(){
-				dialog=document.getElementById("dialog")
+			//登入視窗展開關閉
+			var popup;
+			window.onload = function () {
+				popup = document.getElementById("popup");
+				// console.log(popup);
 			};
-			function showDialog(){
-				dialog.style.display="block";
-			};
-			function closeDialog(){
-				dialog.style.display="none";
-			};
+			function showDialog() {
+				popup.style.display = "block";
+			}
+			function closeDialog() {
+				popup.style.display = "none";
+			// 	$("#dialog").mousedown(function (e) {
+			// 	var e = event || window.event;
+			// 	event.stopPropagation();
+			// });
+			}
 		</script>
 	</body>
 </html>
