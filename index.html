@@ -12,7 +12,7 @@
 	</head>
 
 	<body>
-		<!-- 頁首 -->  
+		<!------------------- 頁首 ------------------->  
 		<header>
 			<ul class="ngb">
 				<li>
@@ -32,43 +32,45 @@
 				<li class="ngb_list">
 					<a href="play.html">開心玩</a>
 				</li>
-				<!-- 搜尋 -->
+				<!------------------- 搜尋 ------------------->
 				<li class="searchbox">
 					<input type="text" placeholder="Search.." class="search" />
 					<button type="button" class="inputbtn">
 						<img src="./img/icon/search.svg" alt="" />
 					</button>
 				</li>
-				<!-- 會員區 -->
+				<!------------------- 會員區 ------------------->
 				<li class="mb">
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
 					<div id="popup"  onclick="closeDialog();" class="popup">
+					</div>
 						<div id="dialog" class="dialog">
 							<div onclick="closeDialog();" class="close">X</div>
 							<div class="login">
-								<button class="fb_login">
-									<img src="./img/icon/facebook.png" alt="" />
-									<span>Facebook 登入</span></button
-								><br />
+								<a href="https://zh-tw.facebook.com/" class="fb_login">
+										<img src="./img/icon/facebook.png" alt=""/>
+										<span>Facebook 登入</span>
+								</a>
+									<br/>
 								<button class="google_login">
-									<img src="./img/icon/google.png" alt="" />
+									<img src="./img/icon/google.png" alt=""/>
 									<span>Google 登入</span>
 								</button>
 							</div>
 							<div class="login2">
 								<label for="account">帳號:</label>
-								<input type="text" name="account" value="" id="account" /><br />
+								<input type="text" name="account" value="" id="account" /><br/>
 								<label for="pwd">密碼:</label>
-								<input type="text" name="pwd" value="" id="pwd" /><br />
+								<input type="text" name="pwd" value="" id="pwd" /><br/>
 								<input type="checkbox" name="rember" value="記住帳號" />
-								<label>記住帳號</label><br />
-								<button class="login-btn"><span>登入</span></button><br />
+								<label>記住帳號</label><br/>
+								<button class="login-btn"><span>登入</span></button><br/>
 								<a href="#">申辦會員</a>
 							</div>
 						</div>
-					</div>
+					
 					<a href="shoppingbasket.html">
 						<img src="./img/icon/shopping-basket.svg" alt="購物籃" class="mbi"/>
 					</a>
@@ -76,17 +78,19 @@
 			</ul>
 		</header>
 
-		<!-- 動畫 -->
+		<!------------------- 動畫 ------------------->
 		<section class="wrapper">
-			<a href="" class="toy1"><img src="./img/toy/toy1.png" alt=""></a>
-			<a href="" class="toy6"><img src="./img/toy/toy6.png" alt=""></a>
-			<a href="" class="toy3"><img src="./img/toy/toy3.png" alt=""></a>
-			<a href="" class="toy8"><img src="./img/toy/toy8.png" alt=""></a>
-			<img src="./img/shopping car bd.png" alt="" class="baldicar"/>
+			<a href="" class="deco toy toy1"><img src="./img/toy/toy1.png" alt=""></a>
+			<a href="" class="deco toy toy2"><img src="./img/toy/toy3.png" alt=""></a>
+			<a href="" class="deco toy toy3"><img src="./img/toy/toy6.png" alt=""></a>
+			<a href="" class="deco toy toy4"><img src="./img/toy/toy8.png" alt=""></a>
+			<a href="" class="deco car car1"><img src="./img/go_out/car1.png" alt=""></a>
+			<a href="" class="deco car car2"><img src="./img/go_out/car2.png" alt=""></a>
+			<div class="deco baldicar"><img src="./img/shopping-car_bd.png" alt="" /></div>
 		</section>
-		<!-- 熱門商品櫃子專區 -->
+		<!------------------- 熱門商品櫃子專區 ------------------->
 		<section class="cabinet">
-			<!--- 衣櫃 -->
+			<!------------------- 衣櫃 ------------------->
 			<!-- 注意檔案名稱大小寫 -->
 			<h1>最新商品<img src="./img/new.svg" alt="" /></h1>
 			<div class="section">
@@ -101,17 +105,17 @@
 					<p class="price">$ 200</p>
 				</div>
 				<div class="card">
-					<a href="#"><img src="./img/toy/toy3.png" alt="" /></a>
-					<p class="name">咕咕雞</p>
-					<p class="price">$ 100</p>
+					<a href="#"><img src="./img/go_out/bag2.png" alt="" /></a>
+					<p class="name">替打 大空間</p>
+					<p class="price">$ 690</p>
 				</div>
 				<div class="card">
-					<a href="#"><img src="./img/toy/toy1.png" alt="" /></a>
-					<p class="name">青蛙呱呱</p>
-					<p class="price">$ 200</p>
+					<a href="#"><img src="./img/go_out/bag3.png" alt="" /></a>
+					<p class="name">下雨我不怕</p>
+					<p class="price">$ 500</p>
 				</div>
 			</div>
-			<!-- 食物櫃 -->
+			<!------------------- 食物櫃 ------------------->
 			<h1>熱門食品<img src="./img/icon/hot.svg" alt="" /></h1>
 			<div class="section">
 				<div class="card">
@@ -137,17 +141,17 @@
 			</div>
 		</section>
 
-		<!-- 頁尾 -->
+		<!------------------- 頁尾 ------------------->
 		<footer>
-			<!-- 左 -->
+			<!------------------- 左 ------------------->
 			<img src="./img/logo_w.svg" alt="BALDI" />
-			<!-- 中 -->
+			<!------------------- 中 ------------------->
 			<div class="boss">
 				<p>BALDI 有狗公司</p>
 				<br />
 				<p>TEL : 2012-1118</p>
 			</div>
-			<!-- 右 -->
+			<!------------------- 右 ------------------->
 			<ul>
 				<li>
 					<a href="index.html">HOME</a>
@@ -167,28 +171,24 @@
 			</ul>
 		</footer>
 
-		<!-- Js -->
+		<!------------------- Js ------------------->
 		<script>
 			//登入視窗展開關閉
-			var popup;
+			let popup;
+			let dialog;
 			window.onload = function () {
 				popup = document.getElementById("popup");
+				dialog = document.getElementById("dialog");
 				// console.log(popup);
 			};
 			function showDialog() {
 				popup.style.display = "block";
+				dialog.style.display = "block";
 			}
 			function closeDialog() {
 				popup.style.display = "none";
-				$("#dialog").mousedown(function (e) {
-				var e = event || window.event;
-				event.stopPropagation();
-			});
+				dialog.style.display = "none";
 			}
-			// $("dialog").mousedown(function (e) {
-			// 	var e = event || window.event;
-			// 	event.stopPropagation();
-			// });
 		</script>
 	</body>
 </html>

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E1A84C;
+}
+section::before{
+    content: "responsive";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50vh;
+    font-size: 15vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 1px rgba(255, 255, 255, 0.1);
+    /* color: transparent; */
+}

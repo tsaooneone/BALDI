@@ -1,17 +1,124 @@
 /*-- 動畫 --*/
+/*-- 動畫 --*/
 .wrapper{
-    background-image: url("../img/toy\ store.jpg");
-    height: 400px;
-    background-repeat: repeat-x;
+    background-image: url("../img/store7.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
     position: relative;
+    overflow: hidden;
+}
+.wrapper::before{
+    content:"";
+    width: 100%;
+    padding-bottom: 34.6%;
+    display: block;
+}
+
+.wrapper a{
+    display: inline-block;
+    margin: 0 auto;
+}
+/* ==== 商品動畫 ==== */
+/* --- 玩具動畫 ---*/
+.toy{
+    animation: shake 4s linear infinite;
+}
+
+.deco{
+    position: absolute;
+    overflow: hidden;
+}
+
+.deco img{
+    width: 100%;
+    height: auto;
+    /* position: absolute */
+}
+
+.toy:hover img{
+    transform: scale(1.2);
+}
+@keyframes shake{
+    10%, 90%{transform: rotate(10deg);}
+    20%, 80%{transform: rotate(-10deg);}
+    30%, 70%{transform: rotate(10deg);}
+    40%, 60%{transform: rotate(-10deg);}
+    50%{transform: translate(0.5px);}
+}
+/* --- 推車動畫 ---*/
+.car{
+    /* animation: move 4s linear infinite; */
+}
+
+.car:hover img{
+    transform: scale(1.2);
+}
+/* @keyframes move{
+    10%, 90%{transform: translate(5px);}
+    20%, 80%{transform: translate(5px);}
+    30%, 70%{transform: translate(5px);}
+    40%, 60%{transform: translate(5px);}
+    50%{transform: translate(0);}
+} */
+/* ==== 商品定位 ==== */
+/* --- 玩具大小 & 定位 ---*/
+.toy1{
+    top: 15%;
+    left: 14%;
+    width: 13%;
+}
+.toy2{
+    top: 15%;
+    left: 23%;
+    width: 13%;
+}
+.toy3{
+    top: 4%;
+    left: 35%;
+    width: 13%;
+}
+.toy4{
+    top: 4%;
+    left: 43%;
+    width: 13%;
+}
+/* --- 推車定位 ---*/
+.car1{
+    top: 50%;
+    left: 33%;
+    width: 16%;
+}
+.car2{
+    top: 50%;
+    left: 43%;
+    width: 16%;
+}
+/* 寶弟購物車動畫 */
+@keyframes baldicar{
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(-100vw) translateX(-100%);
+
+    }
+}
+
+
+.baldicar{
+    width: 26%;
+    height: auto;
+    animation: baldicar 7s linear infinite;
+    right: 0;
+    bottom: 0;
 }
 /*-- 飼料、零食 --*/
 .section{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center ;
-    flex-wrap: wrap; 
-    margin: 20px;
 }
 h1{
     text-align: center;
@@ -21,9 +128,8 @@ h1{
 .card{
     width: 400px;
     height: 200px;
-    margin-bottom: 80px;
-    margin-top: 30px;
     text-align: center;
+    margin: 80px auto;
 }
 
 .card a{
@@ -32,11 +138,11 @@ h1{
 }
 
 .card a:hover{
-    transform:scale(1.5);
+    transform:scale(1.3);
 }
 
 .card img{
-    width: 150px;
+    width: 200px;
 }
 .card p{
     font-weight: bold;
@@ -52,27 +158,4 @@ h1{
     /* font-size: 14px; */
     color: red;
     
-}
-
-@keyframes baldicar{
-    0%{
-        right: 0px;
-        opacity: 0;
-    }
-    1%{
-        opacity: 1;
-    }
-    100%{
-        right: 1400px;
-        opacity: 1;
-    }
-}
-.baldicar{
-    width: 375px;
-    height: 286px;
-    position: absolute;
-    right: -100px;
-    bottom: 30px;
-
-    animation: baldicar 20s linear infinite;
-}
+}   

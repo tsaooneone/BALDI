@@ -12,7 +12,7 @@
 	</head>
 
 	<body>
-		<!-- 頁首 -->
+		<!------------------- 頁首 ------------------->
 		<header>
 			<ul class="ngb">
 				<li>
@@ -30,19 +30,20 @@
 				<li class="ngb_list">
 					<a href="play.html">開心玩</a>
 				</li>
-				<!-- 搜尋 -->
+				<!------------------- 搜尋 ------------------->
 				<li class="searchbox">
 					<input type="text" placeholder="Search.." class="search" />
 					<button type="button" class="inputbtn">
 						<img src="./img/icon/search.svg" alt="" />
 					</button>
 				</li>
-				<!-- 會員區 -->
+				<!------------------- 會員區 ------------------->
 				<li class="mb">
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
 					<div id="popup"  onclick="closeDialog();" class="popup">
+					</div>
 						<div id="dialog" class="dialog">
 							<div onclick="closeDialog();" class="close">X</div>
 							<div class="login">
@@ -66,18 +67,24 @@
 								<a href="#">申辦會員</a>
 							</div>
 						</div>
-					</div>
 					<a href="shoppingbasket.html">
 						<img src="./img/icon/shopping-basket.svg" alt="購物籃" class="mbi"/>
 					</a>
 				</li>
 			</ul>
 		</header>
-		<!-- 動畫 -->
+		<!------------------- 動畫 ------------------->
 		<section class="wrapper">
-			<img src="./img/shopping car bd3.png" alt="" class="baldicar" />
+			<a href="" class="deco toy toy1"><img src="./img/toy/toy1.png" alt=""></a>
+			<a href="" class="deco toy toy2"><img src="./img/toy/toy3.png" alt=""></a>
+			<a href="" class="deco toy toy3"><img src="./img/toy/toy6.png" alt=""></a>
+			<a href="" class="deco toy toy4"><img src="./img/toy/toy8.png" alt=""></a>
+			<a href="" class="deco car car1"><img src="./img/go_out/car1.png" alt=""></a>
+			<a href="" class="deco car car2"><img src="./img/go_out/car2.png" alt=""></a>
+			<div class="deco baldicar"><img src="./img/shopping-car_bd3.png" alt="" /></div>
 		</section>
-		<!-- 玩具&外出用品 -->
+		<!------------------- 玩具&外出用品 ------------------->
+		<!------------------- toy ------------------->
 		<h1>玩具</h1>
 		<div class="section">
 			<div class="card">
@@ -101,8 +108,8 @@
 				<p class="price">$ 300</p>
 			</div>
 			<div class="card">
-				<a href="info.html"><img src="./img/toy/toy5.png" alt="" /></a>
-				<p class="name">小牛套餐</p>
+				<a href="info.html"><img src="./img/toy/toy8.png" alt="" /></a>
+				<p class="name">小牛玩偶</p>
 				<p class="price">$ 450</p>
 			</div>
 			<div class="card">
@@ -111,40 +118,41 @@
 				<p class="price">$ 100</p>
 			</div>
 		</div>
+		<!------------------- go_out ------------------->
 		<h1>外出用品</h1>
 		<div class="section">
 			<div class="card">
-				<a href="#"><img src="./img/go out/bag1.png" alt="" /></a>
+				<a href="#"><img src="./img/go_out/bag1.png" alt="" /></a>
 				<p class="name">好風景背包</p>
 				<p class="price">$ 400</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/bag2.png" alt="" /></a>
+				<a href="#"><img src="./img/go_out/bag2.png" alt="" /></a>
 				<p class="name">替打 大空間</p>
 				<p class="price">$ 690</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/bag3.png" alt="" /></a>
+				<a href="#"><img src="./img/go_out/bag3.png" alt="" /></a>
 				<p class="name">下雨我不怕</p>
 				<p class="price">$ 500</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/botter.png" alt="" /></a>
+				<a href="#"><img src="./img/go_out/botter.png" alt="" /></a>
 				<p class="name">出門不怕渴</p>
 				<p class="price">$ 290</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/car1.png" alt="" /></a>
+				<a href="#"><img src="./img/go_out/car1.png" alt="" /></a>
 				<p class="name">公主的移動城堡</p>
 				<p class="price">$ 2500</p>
 			</div>
 			<div class="card">
-				<a href="#"><img src="./img/go out/car2.png" alt="" /></a>
+				<a href="#"><img src="./img/go_out/car2.png" alt="" /></a>
 				<p class="name">國王的移動城堡</p>
 				<p class="price">$ 3000</p>
 			</div>
 		</div>
-		<!-- 頁尾 -->
+		<!------------------- 頁尾 ------------------->
 		<footer>
 			<!-- 左 -->
 			<img src="./img/logo_w.svg" alt="BALDI" />
@@ -174,23 +182,24 @@
 			</ul>
 		</footer>
 
-		<!-- Js -->
+		<!------------------- Js ------------------->
 		<script>
 			//登入視窗展開關閉
-			var popup;
+			let popup;
+			let dialog;
 			window.onload = function () {
 				popup = document.getElementById("popup");
+				dialog = document.getElementById("dialog");
+
 				// console.log(popup);
 			};
 			function showDialog() {
 				popup.style.display = "block";
+				dialog.style.display = "block";
 			}
 			function closeDialog() {
 				popup.style.display = "none";
-			// 	$("#dialog").mousedown(function (e) {
-			// 	var e = event || window.event;
-			// 	event.stopPropagation();
-			// });
+				dialog.style.display = "none";
 			}
 		</script>
 	</body>

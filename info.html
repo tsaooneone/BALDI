@@ -12,7 +12,7 @@
 	</head>
 
 	<body>
-		<!-- 頁首 -->
+		<!------------------- 頁首 ------------------->
 		<header>
 			<ul class="ngb">
 				<li>
@@ -30,19 +30,20 @@
 				<li class="ngb_list">
 					<a href="play.html">開心玩</a>
 				</li>
-				<!-- 搜尋 -->
+				<!------------------- 搜尋 ------------------->
 				<li class="searchbox">
 					<input type="text" placeholder="Search.." class="search" />
 					<button type="button" class="inputbtn">
 						<img src="./img/icon/search.svg" alt="" />
 					</button>
 				</li>
-				<!-- 會員區 -->
+				<!------------------- 會員區 ------------------->
 				<li class="mb">
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
 					<div id="popup"  onclick="closeDialog();" class="popup">
+					</div>
 						<div id="dialog" class="dialog">
 							<div onclick="closeDialog();" class="close">X</div>
 							<div class="login">
@@ -66,7 +67,6 @@
 								<a href="#">申辦會員</a>
 							</div>
 						</div>
-					</div>
 					<a href="shoppingbasket.html">
 						<img
 							src="./img/icon/shopping-basket.svg"
@@ -77,12 +77,12 @@
 				</li>
 			</ul>
 		</header>
-
+		<!---------------------------------------------------------------------->
 		<section class="top">
-			<!-- (左)更衣室 -->
+			<!------------------- (左)更衣室 ------------------->
 			<div class="show">
 				<img src="./img/toy/toy9-rebg.png" alt="" />
-				<!-- (右)資訊欄 -->
+				<!------------------- (右)資訊欄 ------------------->
 				<div class="info">
 					<h1>小牛套餐</h1>
 					<p>超值組合<br>
@@ -90,7 +90,7 @@
 					    球球雙節棍、棉線鉛球、<br>
                         藍莓甜甜圈、美味棉質雞腿...等
                     </p>
-					<!-- 加1減1 -->
+					<!------------------- 加1減1 ------------------->
 					<input
 						type="button"
 						onclick="calc(this, 1)"
@@ -104,14 +104,14 @@
 						value="+"
 						class="button"
 					/>
-					<!-- 價錢 -->
+					<!------------------- 價錢 ------------------->
 					<p class="price">$ 450</p>
-					<!-- 加入購物車 -->
+					<!------------------- 加入購物車 ------------------->
 					<input type="button" value="加入購物車" class="button" />
 				</div>
 			</div>
 		</section>
-        <!-- 店長推薦專區 -->
+        <!------------------- 店長推薦專區 ------------------->
         <h1 class="mg">店長推薦<img src="./baldi manager.png" alt=""></h1>
         <div class="recommend">
             <div class="card">
@@ -130,17 +130,17 @@
                 <a href="#"><img src="./img/snack/snack7-rebg.png" alt="" /></a>
             </div>
         </div>    
-        <!-- 頁尾 -->
+        <!------------------- 頁尾 ------------------->
 		<footer>
-			<!-- 左 -->
+			<!------------------- 左 ------------------->
 			<img src="./img/logo_w.svg" alt="BALDI" />
-			<!-- 中 -->
+			<!------------------- 中 ------------------->
 			<div class="boss">
 				<p>BALDI 有狗公司</p>
 				<br />
 				<p>TEL : 2012-1118</p>
 			</div>
-			<!-- 右 -->
+			<!------------------- 右 ------------------->
 			<ul>
 				<li>
 					<a href="index.html">HOME</a>
@@ -160,23 +160,23 @@
 			</ul>
 		</footer>
 
-		<!-- Js -->
+		<!------------------- Js ------------------->
 		<script>
 			//登入視窗展開關閉
 			var popup;
 			window.onload = function () {
 				popup = document.getElementById("popup");
+				dialog = document.getElementById("dialog");
+
 				// console.log(popup);
 			};
 			function showDialog() {
 				popup.style.display = "block";
+				dialog.style.display = "block";
 			}
 			function closeDialog() {
 				popup.style.display = "none";
-			// 	$("#dialog").mousedown(function (e) {
-			// 	var e = event || window.event;
-			// 	event.stopPropagation();
-			// });
+				dialog.style.display = "none";
 			}
 		</script>
 	</body>

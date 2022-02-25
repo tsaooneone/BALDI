@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>BALDI STORE</title>
+		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="css/test.css" />
 		<link rel="stylesheet" href="./css/header_footer.css" />
 	</head>
@@ -14,7 +15,8 @@
 		<header>
 			<ul class="ngb">
 				<li>
-					<a href="index.html"></a><img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+					<a href="index.html"></a
+					><img src="./img/logo_w.svg" alt="BALDI" class="logo" />
 				</li>
 				<li class="ngb_list">
 					<a href="index.html">HOME</a>
@@ -40,31 +42,31 @@
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
-					<div id="popup"  onclick="closeDialog();" class="popup">
-						<div id="dialog" class="dialog">
-							<div onclick="closeDialog();" class="close">X</div>
-							<div class="login">
-								<button class="fb_login">
-									<img src="./img/icon/facebook.png" alt="" />
-									<span>Facebook 登入</span></button
-								><br />
-								<button class="google_login">
-									<img src="./img/icon/google.png" alt="" />
-									<span>Google 登入</span>
-								</button>
-							</div>
-							<div class="login2">
-								<label for="account">帳號:</label>
-								<input type="text" name="account" value="" id="account" /><br />
-								<label for="pwd">密碼:</label>
-								<input type="text" name="pwd" value="" id="pwd" /><br />
-								<input type="checkbox" name="rember" value="記住帳號" />
-								<label>記住帳號</label><br />
-								<button class="login-btn"><span>登入</span></button><br />
-								<a href="#">申辦會員</a>
-							</div>
+					<div id="popup" onclick="closeDialog();" class="popup"></div>
+					<div id="dialog" class="dialog">
+						<div onclick="closeDialog();" class="close">X</div>
+						<div class="login">
+							<button class="fb_login">
+								<img src="./img/icon/facebook.png" alt="" />
+								<span>Facebook 登入</span></button
+							><br />
+							<button class="google_login">
+								<img src="./img/icon/google.png" alt="" />
+								<span>Google 登入</span>
+							</button>
+						</div>
+						<div class="login2">
+							<label for="account">帳號:</label>
+							<input type="text" name="account" value="" id="account" /><br />
+							<label for="pwd">密碼:</label>
+							<input type="text" name="pwd" value="" id="pwd" /><br />
+							<input type="checkbox" name="rember" value="記住帳號" />
+							<label>記住帳號</label><br />
+							<button class="login-btn"><span>登入</span></button><br />
+							<a href="#">申辦會員</a>
 						</div>
 					</div>
+
 					<a href="shoppingbasket.html">
 						<img
 							src="./img/icon/shopping-basket.svg"
@@ -218,19 +220,19 @@
 
 		<script>
 			// 會員
-				var popup;
-				window.onload=function(){
-					popup=document.getElementById("popup")
-				};
-				function showDialog(){
-					popup.style.display="block";
-				}
-				function closeDialog(){
-					if(event.trget == popup){
-					popup.style.display="none";
-					}
-				}
-				
+			var popup;
+			window.onload = function () {
+				popup = document.getElementsByClassName("popup")[0];
+				dialog = document.getElementsByClassName("dialog")[0];
+			};
+			function showDialog() {
+				popup.style.display = "block";
+				dialog.style.display = "block";
+			}
+			function closeDialog() {
+				popup.style.display = "none";
+				dialog.style.display = "none";
+			}
 		</script>
 	</body>
 </html>

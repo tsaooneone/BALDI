@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BALDI STORE</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="css/test2.css" />
+		<link rel="stylesheet" href="./css/header_footer.css" />
+	</head>
+
+	<body>
+		<!-- 頁首 -->
+		<header>
+			<ul class="ngb">
+				<li>
+					<a href="index.html"></a
+					><img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+				</li>
+				<li class="ngb_list">
+					<a href="index.html">HOME</a>
+				</li>
+				<li class="ngb_list">
+					<a href="food.html">呷88</a>
+				</li>
+				<li class="ngb_list">
+					<a href="wear.html">穿漂亮</a>
+				</li>
+				<li class="ngb_list">
+					<a href="play.html">開心玩</a>
+				</li>
+            </ul>
+
+
+        
+            <!--- 彈跳視窗下顯示一層透明陰影 --->
+            <div class="shadow"> 
+                <!--- 彈跳視窗外框 --->
+                <div class="out"> 
+                    <!--- 關閉視窗 --->
+                    <div class="close_div"> 
+                        <!--- 關閉視窗的叉叉 --->
+                        <span class="close">X</span> 
+                    </div>
+                    <!--- 登入 & 註冊外層 --->
+                    <div class="login_page_box"> 
+                        <!--- 登入註冊 --->
+                        <div class="login"> 
+                            <!--- 登入tab --->
+                            <input type="radio" id="tab1" name="tabs" checked> 
+                            <label class="tab-label" for="tab1">登入</label>
+                            <!--- 註冊tab --->
+                            <input type="radio" id="tab2" name="tabs"> 
+                            <label class="tab-label" for="tab2">註冊</label>
+                            <!--- 使用者登入資料框外框 --->
+                            <section id="content1"> 
+                            <form method="post" class="login_form" id="login"></form>
+                            <input type="hidden" name="reqType" value="Login"> <!--- 用戶看不到也不可改的數據 --->
+                            <div class="extra"></div>
+                            <div class="out-login">
+                                <button class="fb_login">
+									<img src="./img/icon/facebook.png" alt="" />
+									<span>Facebook 登入</span></button>
+									<br />
+								<button class="google_login">
+									<img src="./img/icon/google.png" alt="" />
+									<span>Google 登入</span>
+								</button>
+                            </div>
+                            <!--- 帳號 --->
+                            <div class="account">
+                                <input name="user" id="userid" required="required" type="text" class="modal-form-input" placeholder="Username or email">
+                            </div>
+                            <!--- 密碼 --->
+                            <div class="password">
+                                <input name="pass" id="password" type="password" required="required" class="modal-form-input" placeholder="Password">
+                            </div>
+                            <!--- 記住帳號 --->
+                            <div class="remember">
+                                <input type="checkbox" name="rem">
+                                <label for="remember">記住帳號</label>
+                            </div>
+                            <!--- 登入按鈕 --->
+                            <button type="submit" class="btn">登入</button>
+                        </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>

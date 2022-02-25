@@ -23,9 +23,9 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
-.info p{
-    /* font-size: 14px; */
-}
+/* .info p{
+     font-size: 14px; 
+} */
 /*-- size選單 --*/
 select{
     width: 100px;
