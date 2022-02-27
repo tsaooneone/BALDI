@@ -48,26 +48,15 @@
                         <!--- 登入註冊 --->
                         <div class="login"> 
                             <!--- 登入tab --->
-                            <input type="radio" id="tab1" name="tabs" checked> 
-                            <label class="tab-label" for="tab1">登入</label>
+                            <a href="#" class="tab-links" onclick="openLogin('signin')" id="defaultOpen">登入</a>
                             <!--- 註冊tab --->
-                            <input type="radio" id="tab2" name="tabs"> 
-                            <label class="tab-label" for="tab2">註冊</label>
+                            <a href="#" class="tab-links" onclick="openLogin('signup')">註冊</a>
+
+                            <!--=======================  登入 =======================-->
                             <!--- 使用者登入資料框外框 --->
-                            <section id="content1"> 
+                            <section id="signin" class="tab-content"> 
                             <form method="post" class="login_form" id="login"></form>
                             <input type="hidden" name="reqType" value="Login"> <!--- 用戶看不到也不可改的數據 --->
-                            <div class="extra"></div>
-                            <div class="out-login">
-                                <button class="fb_login">
-									<img src="./img/icon/facebook.png" alt="" />
-									<span>Facebook 登入</span></button>
-									<br />
-								<button class="google_login">
-									<img src="./img/icon/google.png" alt="" />
-									<span>Google 登入</span>
-								</button>
-                            </div>
                             <!--- 帳號 --->
                             <div class="account">
                                 <input name="user" id="userid" required="required" type="text" class="modal-form-input" placeholder="Username or email">
@@ -83,9 +72,79 @@
                             </div>
                             <!--- 登入按鈕 --->
                             <button type="submit" class="btn">登入</button>
+                            <div class="out-login">
+                                <button class="fb_login">
+									<img src="./img/icon/facebook.png" alt="" />
+									<span>Facebook 登入</span></button>
+									<br />
+								<button class="google_login">
+									<img src="./img/icon/google.png" alt="" />
+									<span>Google 登入</span>
+								</button>
+                            </div>
                         </section>
+                        <!--=======================  註冊 =======================-->
+                        <section id="signup" class="tab-content">
+                            <form method="POST" class="login-form" id="Register">
+                                <input type="hidden" name="reqType" value="Register">
+                                <div class="form-group">
+                                  <input name="email" id="email" type="email" required="required" class="modal-form-input" placeholder="E-mail">
+                                </div>
+                                <div class="form-group">
+                                  <input name="pass" id="reg-password" type="password" required="required" class="modal-form-input" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                  <input name="institute" id="organization" autocomplete="off" required="required" type="text" class="modal-form-input typeahead" placeholder="Confirm password">
+                                </div>
+                                <div class="out-login">
+                                    <button class="fb_login">
+                                        <img src="./img/icon/facebook.png" alt="" />
+                                        <span>Facebook 登入</span></button>
+                                        <br />
+                                    <button class="google_login">
+                                        <img src="./img/icon/google.png" alt="" />
+                                        <span>Google 登入</span>
+                                    </button>
+                                </div>
+                                <div class="form-group">
+                                <button class="btn btn-green signup-button" type="submit">註冊</button>
+                                </div>
+                            </form>
+                        </section>
+
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <script>
+                // ================ 預設是登入頁簽 ================
+                document.getElementById("defaultOpen").click();
+
+                // ================ 切換登入/註冊頁簽 ================
+                function openLogin(tabsName) {
+                    // console.log("ee");
+                    // Declare all variables
+                    var tabContent, tabLinks;
+
+                    //================ 先將內容兩個頁簽都隱藏 ================
+                    tabContent = document.getElementsByClassName("tab-content");
+                    for (i = 0; i < tabContent.length; i++) {
+                        tabContent[i].style.display = "none";
+                    }
+
+                    // ================ 切換頁簽時的style背景變色 ================
+                    tabLinks = document.getElementsByClassName("tab-links");
+                    for (i = 0; i < tabLinks.length; i++) {
+                        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+                    }
+
+                    // ================ 點擊到的頁簽要打開 ================
+                    document.getElementById(tabsName).style.display = "block";
+                    // evt.currentTarget.className += " active";
+                }
+
+                
+            </script>
     </body>

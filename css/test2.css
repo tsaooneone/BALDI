@@ -16,26 +16,27 @@ body{
     background-color: rgba(0,0,0,0.4);
 }
 .out{
-    background-color: #eff1f3;
+    background-color: #E1A84C;
     margin: auto;
-    padding-top: 20px;
-    border: 1px solid #888;
-    width: 550px;
+    border: 5px solid white;
+    width: 380px;
     border-radius: 5px;
 }
 .close_div{
     height: 30px;
     padding: 0 20px;
+    margin: 5px auto;
 }
 .close{
-    color: #aaaaaa;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 .login_page_box{
     padding: 20px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    background-color: white;
 }
 .tab-label{
     display: inline-block;
@@ -43,7 +44,9 @@ body{
     padding: 15px 25px;
     font-weight: 600;
     text-align: center;
-    color: #888;
+    color: white;
+    background-color: rgba(225,168,76,.8);
+    cursor: pointer;
     border: 1px solid transparent;
     width: 50%;
     padding-bottom: 12px;
@@ -61,14 +64,37 @@ input:checked  label.tab-label{
     float: left;
 }
 section{
-    padding: 20px 30px 30px 30px;
+    padding: 20px;
     border: 1px solid #ddd;
-    border-bottom: none;
+    /* border-bottom: none; */
     text-align: justify;
+    text-align: center;
     /* box-sizing: border-box; */
 }
-.login{
-    width: 290px;
+.remember{
+    text-align: center; 
+    color: gray;
+    margin-top: 5px;
+}
+.btn{
+    margin-top: 20px;
+    background-color: #E1A84C;
+    border-style: none;
+    padding: 6px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;;
+}
+div.login{
+    width: 280px;
+}
+
+.out-login button img{
+    width: 35px;
+}
+
+input[type="radio"]{
+    display: none;
 }
 
 .login_form{
@@ -109,4 +135,9 @@ section{
     transition: all 0.3s ease;
     font-weight: 500;
     width: 100%;
+}
+
+/* 註冊 */
+.tab-content{
+    display: none;
 }

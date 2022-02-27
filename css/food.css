@@ -45,20 +45,10 @@
     50%{transform: translate(0.5px);}
 }
 /* --- 推車動畫 ---*/
-.car{
-    /* animation: move 4s linear infinite; */
-}
 
 .car:hover img{
     transform: scale(1.2);
 }
-/* @keyframes move{
-    10%, 90%{transform: translate(5px);}
-    20%, 80%{transform: translate(5px);}
-    30%, 70%{transform: translate(5px);}
-    40%, 60%{transform: translate(5px);}
-    50%{transform: translate(0);}
-} */
 /* ==== 商品定位 ==== */
 /* --- 玩具大小 & 定位 ---*/
 .toy1{
@@ -145,7 +135,7 @@ h1{
 }
 
 .card img{
-    width: 200px;
+    width: 50%;
 }
 .card p{
     font-weight: bold;

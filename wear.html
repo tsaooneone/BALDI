@@ -5,10 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>BALDI STORE</title>
-		<link rel="stylesheet" href="./css/reset.css">
-		<link rel="stylesheet" href="./css/header_footer.css">
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/header_footer.css" />
 		<link rel="stylesheet" href="css/wear.css" />
-		<link rel="icon" href="./img/icon/title icon2-2.ico"/>
+		<link rel="icon" href="./img/icon/title icon2-2.ico" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 	</head>
 
 	<body>
@@ -16,7 +17,9 @@
 		<header>
 			<ul class="ngb">
 				<li>
-					<a href="index.html"><img src="./img/logo_w.svg" alt="BALDI" class="logo" /></a>
+					<a href="index.html"
+						><img src="./img/logo_w.svg" alt="BALDI" class="logo"
+					/></a>
 				</li>
 				<li class="ngb_list">
 					<a href="index.html">HOME</a>
@@ -42,106 +45,252 @@
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
-					<div id="popup"  onclick="closeDialog();" class="popup">
-					</div>
-						<div id="dialog" class="dialog">
-							<div onclick="closeDialog();" class="close">X</div>
-							<div class="login">
-								<button class="fb_login">
-									<img src="./img/icon/facebook.png" alt="" />
-									<span>Facebook 登入</span></button>
-									<br />
-								<button class="google_login">
-									<img src="./img/icon/google.png" alt="" />
-									<span>Google 登入</span>
-								</button>
-							</div>
-							<div class="login2">
-								<label for="account">帳號:</label>
-								<input type="text" name="account" value="" id="account" /><br />
-								<label for="pwd">密碼:</label>
-								<input type="text" name="pwd" value="" id="pwd" /><br />
-								<input type="checkbox" name="rember" value="記住帳號" />
-								<label>記住帳號</label><br />
-								<button class="login-btn"><span>登入</span></button><br />
-								<a href="#">申辦會員</a>
+					<!--- 彈跳視窗下顯示一層透明陰影 --->
+					<div class="shadow" onclick="closeDialog();">
+						<!--- 彈跳視窗外框 --->
+						<div class="out">
+							<!--- 關閉視窗的叉叉 --->
+							<div class="close" onclick="closeDialog();">X</div>
+							<!--- 登入 & 註冊外層 --->
+							<div class="login_page_box">
+								<!--- 登入註冊 --->
+								<div class="login">
+									<!--- 登入tab --->
+									<a
+										href="#"
+										class="tab-links"
+										onclick="openLogin(event, 'signin'); return false;"
+										id="defaultOpen"
+										>登入</a
+									>
+									<!--- 註冊tab --->
+									<a
+										href="#"
+										class="tab-links"
+										onclick="openLogin(event, 'signup'); return false;"
+										>註冊</a
+									>
+
+									<!--=======================  登入 =======================-->
+									<!--- 使用者登入資料框外框 --->
+									<section id="signin" class="tab-content">
+										<form method="post" class="login_form" id="login">
+											<input type="hidden" name="reqType" value="Login" />
+											<!--- 用戶看不到也不可改的數據 --->
+											<!--- 帳號 --->
+											<div class="account">
+												<input
+													name="user"
+													id="userid"
+													required="required"
+													type="text"
+													class="modal-form-input"
+													placeholder="Username or email"
+												/>
+											</div>
+											<!--- 密碼 --->
+											<div class="password">
+												<input
+													name="pass"
+													id="password"
+													type="password"
+													required="required"
+													class="modal-form-input"
+													placeholder="Password"
+												/>
+											</div>
+											<!--- 記住帳號 --->
+											<div class="remember">
+												<input type="checkbox" name="rem" />
+												<label for="remember">記住帳號</label>
+											</div>
+											<!--- 登入按鈕 --->
+											<button type="submit" class="btn">登入</button>
+											<div class="out-login">
+												<button
+													class="fb_login"
+													value="Facebook"
+													onclick="location.href='https://zh-tw.facebook.com/'"
+												>
+													<img src="./img/icon/facebook.png" alt="" />
+													<span>Facebook 登入</span>
+												</button>
+												<button
+													class="google_login"
+													value="Google"
+													onclick="location.href='https://accounts.google.com/signin'"
+												>
+													<img src="./img/icon/google.png" alt="" />
+													<span>Google 登入</span>
+												</button>
+											</div>
+										</form>
+									</section>
+									<!--=======================  註冊 =======================-->
+									<section id="signup" class="tab-content">
+										<form method="POST" class="login-form" id="Register">
+											<input type="hidden" name="reqType" value="Register" />
+											<div class="form-group">
+												<input
+													name="email"
+													id="email"
+													type="email"
+													required="required"
+													class="modal-form-input"
+													placeholder="E-mail"
+												/>
+											</div>
+											<div class="form-group">
+												<input
+													name="pass"
+													id="reg-password"
+													type="password"
+													required="required"
+													class="modal-form-input"
+													placeholder="Password"
+												/>
+											</div>
+											<div class="form-group">
+												<input
+													name="institute"
+													id="organization"
+													autocomplete="off"
+													required="required"
+													type="text"
+													class="modal-form-input typeahead"
+													placeholder="Confirm password"
+												/>
+											</div>
+
+											<button class="btn" type="submit">註冊</button>
+
+											<div class="out-login">
+												<button
+													class="fb_login"
+													value="Facebook"
+													onclick="location.href='https://zh-tw.facebook.com/'"
+												>
+													<img src="./img/icon/facebook.png" alt="" />
+													<span>Facebook 登入</span>
+												</button>
+												<button
+													class="google_login"
+													value="Google"
+													onclick="location.href='https://accounts.google.com/signin'"
+												>
+													<img src="./img/icon/google.png" alt="" />
+													<span>Google 登入</span>
+												</button>
+											</div>
+										</form>
+									</section>
+								</div>
 							</div>
 						</div>
+					</div>
 					<a href="shoppingbasket.html">
-						<img src="./img/icon/shopping-basket.svg" alt="購物籃" class="mbi"/>
+						<img
+							src="./img/icon/shopping-basket.svg"
+							alt="購物籃"
+							class="mbi"
+						/>
 					</a>
 				</li>
 			</ul>
 		</header>
 
-        <section class="top">
-            <!------------------- (左)更衣室 ------------------->
-            <div class="room">
-                <img src="./img/Dogmodel.svg" alt="">
-                <!------------------- (右)資訊欄 ------------------->
-                <div class="info">
-                    <h1>藍色小星星</h1>
-                    <p> 胸圍 : 15 cm</p>
-                    <p> 背長 : 30 cm</p>
-                    <p> 材質 : 純棉</p>
-                    <!------------------- size選單 ------------------->
-                    <select name="size" id="">
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                    </select>
-                    <br>
-                    <!------------------- 加1減1 ------------------->
-                    <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
-                    <input type="text" value="1" class="text"/>
-                    <input type="button" onclick="calc(this, -1)" value="+" class="button" />
-                    <!------------------- 價錢 ------------------->
-                    <p class="price">$ 200</p>
-                    <!------------------- 加入購物車 ------------------->
-                    <input type="button" value="加入購物車" class="button">
-                </div>
-            </div>
-        </section>
-		<!------------------- 衣服 ------------------->
-		<section id="slider">
-			<input type="radio" name="slider" id="s1">
-			<input type="radio" name="slider" id="s2">
-			<input type="radio" name="slider" id="s3" checked>
-			<input type="radio" name="slider" id="s4">
-			<input type="radio" name="slider" id="s5">
-			<input type="radio" name="slider" id="s6">
-			<input type="radio" name="slider" id="s7">
-		
-			<label for="s1" id="slide1">
-				<img src="./img/clothing/1.png" alt="">
-			</label>
+		<section class="top">
+			<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./img/clothing/1.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/clothing/2.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/clothing/3.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/clothing/4.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/clothing/5.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/clothing/6.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/clothing/7.png" />
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+		    </div>
 
-			<label for="s2" id="slide2">
-				<img src="./img/clothing/2.png" alt="">
-			</label>
+			<div style="width: 50%;">			
+				<!------------------- (右)資訊欄 ------------------->
+				<div class="info">
+					<h1>藍色小星星</h1>
+					<p>胸圍 : 15 cm</p>
+					<p>背長 : 30 cm</p>
+					<p>材質 : 純棉</p>
+					<!------------------- size選單 ------------------->
+					<select name="size" id="">
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+					</select>
+					<br />
+					<!------------------- 加1減1 ------------------->
+					<input
+						type="button"
+						onclick="calc(this, 1)"
+						value="-"
+						class="button"
+					/>
+					<input type="text" value="1" class="text" />
+					<input
+						type="button"
+						onclick="calc(this, -1)"
+						value="+"
+						class="button"
+					/>
+					<!------------------- 價錢 ------------------->
+					<p class="price">$ 200</p>
+					<!------------------- 加入購物車 ------------------->
+					<input type="button" value="加入購物車" class="button" />
+				</div>
+			</div>
+		</section>
+			
+		<div thumbsSlider="" class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+				<img src="./img/clothing/1.png" />
+			</div>
+			<div class="swiper-slide">
+				<img src="./img/clothing/2.png" />
+			</div>
+			<div class="swiper-slide">
+				<img src="./img/clothing/3.png" />
+			</div>
+			<div class="swiper-slide">
+				<img src="./img/clothing/4.png" />
+			</div>
+			<div class="swiper-slide">
+				<img src="./img/clothing/5.png" />
+			</div>
+			<div class="swiper-slide">
+				<img src="./img/clothing/6.png" />
+			</div>
+			<div class="swiper-slide">
+				<img src="./img/clothing/7.png" />
+			</div>
+			</div>
+		</div>
 
-			<label for="s3" id="slide3">
-				<img src="./img/clothing/3.png" alt="">
-			</label>
-
-			<label for="s4" id="slide4">
-				<img src="./img/clothing/4.png" alt="">
-			</label>
-
-			<label for="s5" id="slide5">
-				<img src="./img/clothing/5.png" alt="">
-			</label>
-
-			<label for="s6" id="slide6">
-				<img src="./img/clothing/6.png" alt="">
-			</label>
-
-			<label for="s7" id="slide7">
-				<img src="./img/clothing/7.png" alt="">
-			</label>
-        </section>
-        
-        <!------------------- 頁尾 ------------------->
+		<!------------------- 頁尾 ------------------->
 		<footer>
 			<!------------------- 左 ------------------->
 			<img src="./img/logo_w.svg" alt="BALDI" />
@@ -171,31 +320,31 @@
 			</ul>
 		</footer>
 
-		<!------------------- Js ------------------->
-		
-		<script>
-		// ============== 會員 ==============
-			// ------- 登入視窗展開關閉 -------
-			let popup;
-			let dialog;
-			window.onload = function () {
-				popup = document.getElementById("popup");
-				dialog = document.getElementById("dialog");
+		<!------------------- member js ------------------->
+		<script src="./js/member.js"></script>
 
-				// console.log(popup);
-			};
-			function showDialog() {
-				popup.style.display = "block";
-				dialog.style.display = "block";
-			}
-			function closeDialog() {
-				popup.style.display = "none";
-				dialog.style.display = "none";
-			}
-			
-				
+		<!--------------------- 衣服js --------------------->
+		<!-- Swiper JS -->
+		<script src="./js/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 10,
+			slidesPerView: 4,
+			freeMode: true,
+			watchSlidesProgress: true,
+			});
+			var swiper2 = new Swiper(".mySwiper2", {
+			spaceBetween: 10,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			thumbs: {
+				swiper: swiper,
+			},
+			});
 		</script>
-		       
-  		
 	</body>
 </html>

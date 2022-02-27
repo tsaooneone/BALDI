@@ -1,232 +1,296 @@
-*{
-    box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
-body{
-    font-family: Arial,"微軟正黑體";
-    font-size: 16px;
+body {
+	font-family: Arial, "微軟正黑體";
+	font-size: 16px;
+	position: relative;
 }
- h1{
-     font-size: 24px;
-     color: #E1A84C;
-     font-weight: bold;
- }
- .price{
-     color: red;
- }
+h1 {
+	font-size: 24px;
+	color: #e1a84c;
+	font-weight: bold;
+}
+.price {
+	color: red;
+}
 /*-- 頁首 --*/
-header{
-    background-color: #E1A84C;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+header {
+	background-color: #e1a84c;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
 }
-.logo{
-    width: 180px;
-    height: 80px;
-    margin: 0 30px;
-    
+.logo {
+	width: 180px;
+	height: 80px;
+	margin: 0 30px;
 }
 
 /* --- 導覽列 &  搜尋--- */
-.ngb{
-    height: 105px;
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    justify-content: space-around;
+.ngb {
+	height: 105px;
+	display: flex;
+	padding: 10px;
+	align-items: center;
+	justify-content: space-around;
 }
-.ngb > li > a{
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-}
-
-
-.ngb .ngb_list:hover a{
-    background-color: white;
-    border-radius: 10px;
-    color: #E1A84C;
+.ngb > li > a {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	padding: 10px;
 }
 
-.searchbox{
-    position: relative;
+.ngb .ngb_list:hover a {
+	background-color: white;
+	border-radius: 10px;
+	color: #e1a84c;
 }
 
-.search{
-    width: 300px;
-    height: 30px;
-    font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid #E1A84C;
-    padding-left: 10px;
+.searchbox {
+	position: relative;
 }
 
-.inputbtn{
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 4px;
-    right: 10px;
-    border-style: none;
-    background-color: transparent;
+.search {
+	width: 300px;
+	height: 30px;
+	font-size: 16px;
+	border-radius: 10px;
+	border: 1px solid #e1a84c;
+	padding-left: 10px;
 }
 
+.inputbtn {
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 4px;
+	right: 10px;
+	border-style: none;
+	background-color: transparent;
+}
 
 /* --- 會員區 --- */
-.mb{
-    display: flex;
- }
- .mbi{
-     height: 60px;
-     width: 60px;
- }
- .member{
-     border-style: none;
-     background-color: transparent;
-     cursor: pointer;
- }
- /* --- 彈跳視窗 --- */
- .popup{
-     height: 100vh;
-     position: absolute;
-     top: 0;
-     right: 0;
-     left: 0;
-     bottom: 0;
-     background-color: rgba(0 , 0, 0, .5);
-     display: none;
-     z-index: 888;
- }
- .dialog{
-     position: fixed;
-     top: 200px;
-     left: 50%;
-     width: 300px;
-     border: 3px solid white;
-     border-radius: 10px;
-     background-color: #E1A84C;
-     box-shadow: 0 0 20px black ;
-     padding: 10px;
-     transform: translate(-120px,0px);
-     overflow: hidden;
-     display: none;
-     z-index: 999;
- }
- .dialog > .close{
-     position: absolute;
-     top: 5px;
-     right: 7px;
-     cursor: pointer;
-     color: white;
- }
- /* --- FB & Google 登入 --- */
- .login{
-     margin: 0 auto;
-     width: 260px;
-     padding: 20px 0;
- }
- .login > a{
-    /* display: inline-block; */
-    text-decoration: none;
-    /* width: 240px; */
- }
- .login img{
-     display: inline-block;
-     width: 50px;
-     /* margin-left: 40px; */
- }
- .login span{
-     margin: 10px;
-     font-weight: bold;
- }
- .fb_login{
-     width: 240px;
-     display: flex;
-     background-color: #3b5998;
-     font-size: 20px;
-     color: white;
-     border-radius: 5px;
-     border-color: #3b5998;
-     justify-content: center;
-     align-items: center;
-     
- }
- .google_login{
-     width: 240px;
-     display: flex;
-     background-color: #EB4334;
-     font-size: 20px;
-     color: white;
-     border-radius: 5px;
-     border-color: #EB4334;
-     justify-content: center;
- }
- /* --- 帳號密碼 --- */
- .login2{
-     margin: 0 auto;
-     text-align: center;
-     color: white;
-     font-size: 18px;
- }
- .login2 > a{
-    display: inline-block;
-    color: white;
-    margin-top: 5px;
- }
- .login2 input{
-     margin: 10px;
- } 
- .login-btn{
-     width: 50px;
-     height: 30px;
-     margin: 5px;
-     background-color: white;
-     color: #E1A84C;
-     border-radius: 5px;
-     border-color: #E1A84C;
-     text-align: center;
-     font-weight: bold;
- }
+.mb {
+	display: flex;
+}
+.mbi {
+	height: 60px;
+	width: 60px;
+}
+.member {
+	border-style: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+/* --- 彈跳視窗 --- */
+
+/* ======= 彈跳視窗下顯示一層透明陰影 ======= */
+.shadow {
+	position: fixed;
+	z-index: 1000;
+	padding-top: 70px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+/* ======= 彈跳視窗外框 ======= */
+.out {
+	background-color: #e1a84c;
+	margin: auto;
+	border: 5px solid white;
+	width: 380px;
+	border-radius: 5px;
+}
+/* ======= 關閉視窗(關閉視窗叉叉) ======= */
+.close {
+	height: 30px;
+	padding: 10px;
+	margin: 5px auto;
+	text-align: right;
+    cursor: pointer;
+}
+/* ======= 登入&註冊外層 ======= */
+.login_page_box {
+	padding: 20px;
+	background-color: white;
+}
+
+.tab-links.-on{
+    border: 2px dashed white;
+    background-color: rgba(225, 168, 76);
+}
+
+/* ======= 登入&註冊 ======= */
+.login {
+	margin: 0 auto;
+	width: 280px;
+	padding: 10px 0;
+}
+.login > a {
+	text-decoration: none;
+}
+.login img {
+	display: inline-block;
+	width: 35px;
+}
+.login span {
+	margin: 5px;
+	font-weight: bold;
+}
+/* ======= 登入&註冊tab ======= */
+.tab-links {
+	display: inline-block;
+	padding: 15px 25px;
+	text-align: center;
+	color: white;
+	background-color: rgba(225, 168, 76, 0.5);
+	border: 1px solid transparent;
+	width: 49%;
+	padding-bottom: 12px;
+	font-size: 20px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+/* ======= FB & GOOGLE登入 ======= */
+.out-login {
+	margin-top: 10px;
+}
+.out-login button {
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.out-login button img {
+	width: 35px;
+}
+.fb_login {
+	width: 240px;
+	display: flex;
+	background-color: #3b5998;
+	font-size: 20px;
+	color: white;
+	border-radius: 5px;
+	border-color: #3b5998;
+	justify-content: center;
+	align-items: center;
+}
+.google_login {
+	width: 240px;
+	display: flex;
+	background-color: #eb4334;
+	font-size: 20px;
+	color: white;
+	border-radius: 5px;
+	border-color: #eb4334;
+	justify-content: center;
+}
+/* ======= 登入 & 註冊內容 ======= */
+.login section {
+	padding: 20px;
+	border: 1px solid #ddd;
+	text-align: justify;
+	text-align: center;
+}
+.tab-content  input {
+	border: 1px solid #c2c7d0;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 2px rgb(151 159 175 / 10%),
+		inset 0 1px 15px rgb(151 159 175 / 5%);
+	box-sizing: border-box;
+	color: #39424e;
+	display: inline-block;
+	line-height: 1.5em;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding: 7px 10px;
+	transition: all 0.3s ease;
+	font-weight: 500;
+	width: 100%;
+}
+/* ======= 記住帳號 ======= */
+.remember {
+	text-align: center;
+	color: gray;
+	margin-top: 5px;
+}
+.remember input {
+	width: 15px;
+}
+/* ======= 登入 & 註冊按鈕 ======= */
+.btn {
+	margin: 20px 0 10px;
+	background-color: #e1a84c;
+	border-style: none;
+	padding: 5px;
+	font-size: 20px;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+
+.login_form {
+	margin-bottom: 14px;
+}
+.account {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	position: relative;
+}
+.account_icon {
+	opacity: 1;
+	position: absolute;
+	z-index: 1;
+	left: 8px;
+	top: 10px;
+	color: #979faf;
+	font-size: 26px;
+}
+
 /*-- 內容 --*/
-h1{
-    color: #E1A84C;
+h1 {
+	color: #e1a84c;
 }
 /*-- 頁尾 --*/
-footer{
-    background-color: #E1A84C;
-    /* font-size: 14px; */
-    color: white;
-    height: 120px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+	background-color: #e1a84c;
+	/* font-size: 14px; */
+	color: white;
+	height: 120px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 /*-- 左 --*/
-footer img{
-    width: 180px;
-    height: 80px;
-    margin: 50px;
+footer img {
+	width: 180px;
+	height: 80px;
+	margin: 50px;
 }
 
 /*-- 中 --*/
-.boss{
-    margin: 40px;
-    margin-left: 130px;
+.boss {
+	margin: 40px;
+	margin-left: 130px;
 }
 
 /*-- 右 --*/
-footer ul{
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
+footer ul {
+	display: flex;
+	justify-content: center;
+	margin-left: 50px;
 }
-footer li a{
-    text-decoration: none;
-    color: white;
-    margin: 20px;
+footer li a {
+	text-decoration: none;
+	color: white;
+	margin: 20px;
 }
-

@@ -42,37 +42,146 @@
 					<button onclick="showDialog();" class="member">
 						<img src="./img/icon/member.svg" alt="會員登入/註冊" class="mbi" />
 					</button>
-					<div id="popup"  onclick="closeDialog();" class="popup">
-					</div>
-						<div id="dialog" class="dialog">
-							<div onclick="closeDialog();" class="close">X</div>
-							<div class="login">
-								<button class="fb_login">
-									<img src="./img/icon/facebook.png" alt="" />
-									<span>Facebook 登入</span></button
-								><br />
-								<button class="google_login">
-									<img src="./img/icon/google.png" alt="" />
-									<span>Google 登入</span>
-								</button>
-							</div>
-							<div class="login2">
-								<label for="account">帳號:</label>
-								<input type="text" name="account" value="" id="account" /><br />
-								<label for="pwd">密碼:</label>
-								<input type="text" name="pwd" value="" id="pwd" /><br />
-								<input type="checkbox" name="rember" value="記住帳號" />
-								<label>記住帳號</label><br />
-								<button class="login-btn"><span>登入</span></button><br />
-								<a href="#">申辦會員</a>
+<!--- 彈跳視窗下顯示一層透明陰影 --->
+					<div class="shadow" onclick="closeDialog();">
+						<!--- 彈跳視窗外框 --->
+						<div class="out">
+							<!--- 關閉視窗的叉叉 --->
+							<div class="close" onclick="closeDialog();">X</div>
+							<!--- 登入 & 註冊外層 --->
+							<div class="login_page_box">
+								<!--- 登入註冊 --->
+								<div class="login">
+									<!--- 登入tab --->
+									<a
+										href="#"
+										class="tab-links"
+										onclick="openLogin(event, 'signin'); return false;"
+										id="defaultOpen"
+										>登入</a
+									>
+									<!--- 註冊tab --->
+									<a href="#" class="tab-links" onclick="openLogin(event, 'signup'); return false;"
+										>註冊</a
+									>
+
+									<!--=======================  登入 =======================-->
+									<!--- 使用者登入資料框外框 --->
+									<section id="signin" class="tab-content">
+										<form method="post" class="login_form" id="login">
+											<input type="hidden" name="reqType" value="Login" />
+											<!--- 用戶看不到也不可改的數據 --->
+											<!--- 帳號 --->
+											<div class="account">
+												<input
+													name="user"
+													id="userid"
+													required="required"
+													type="text"
+													class="modal-form-input"
+													placeholder="Username or email"
+												/>
+											</div>
+											<!--- 密碼 --->
+											<div class="password">
+												<input
+													name="pass"
+													id="password"
+													type="password"
+													required="required"
+													class="modal-form-input"
+													placeholder="Password"
+												/>
+											</div>
+											<!--- 記住帳號 --->
+											<div class="remember">
+												<input type="checkbox" name="rem" />
+												<label for="remember">記住帳號</label>
+											</div>
+											<!--- 登入按鈕 --->
+											<button type="submit" class="btn">登入</button>
+											<div class="out-login">
+												<button
+													class="fb_login"
+													value="Facebook"
+													onclick="location.href='https://zh-tw.facebook.com/'"
+												>
+													<img src="./img/icon/facebook.png" alt="" />
+													<span>Facebook 登入</span>
+												</button>
+												<button
+													class="google_login"
+													value="Google"
+													onclick="location.href='https://accounts.google.com/signin'"
+												>
+													<img src="./img/icon/google.png" alt="" />
+													<span>Google 登入</span>
+												</button>
+											</div>
+										</form>
+									</section>
+									<!--=======================  註冊 =======================-->
+									<section id="signup" class="tab-content">
+										<form method="POST" class="login-form" id="Register">
+											<input type="hidden" name="reqType" value="Register" />
+											<div class="form-group">
+												<input
+													name="email"
+													id="email"
+													type="email"
+													required="required"
+													class="modal-form-input"
+													placeholder="E-mail"
+												/>
+											</div>
+											<div class="form-group">
+												<input
+													name="pass"
+													id="reg-password"
+													type="password"
+													required="required"
+													class="modal-form-input"
+													placeholder="Password"
+												/>
+											</div>
+											<div class="form-group">
+												<input
+													name="institute"
+													id="organization"
+													autocomplete="off"
+													required="required"
+													type="text"
+													class="modal-form-input typeahead"
+													placeholder="Confirm password"
+												/>
+											</div>
+
+											<button class="btn" type="submit">註冊</button>
+
+											<div class="out-login">
+												<button
+													class="fb_login"
+													value="Facebook"
+													onclick="location.href='https://zh-tw.facebook.com/'">
+													<img src="./img/icon/facebook.png" alt="" />
+													<span>Facebook 登入</span>
+												</button>
+												<button
+													class="google_login"
+													value="Google"
+													onclick="location.href='https://accounts.google.com/signin'">
+													<img src="./img/icon/google.png" alt="" />
+													<span>Google 登入</span>
+												</button>
+											</div>
+										</form>
+									</section>
+								</div>
 							</div>
 						</div>
+					</div>
 					<a href="shoppingbasket.html">
-						<img
-							src="./img/icon/shopping-basket.svg"
-							alt="購物籃"
-							class="mbi"
-						/>
+						<img src="./img/icon/shopping-basket.svg"alt="購物籃"class="mbi"/>
 					</a>
 				</li>
 			</ul>
@@ -160,24 +269,7 @@
 			</ul>
 		</footer>
 
-		<!------------------- Js ------------------->
-		<script>
-			//登入視窗展開關閉
-			var popup;
-			window.onload = function () {
-				popup = document.getElementById("popup");
-				dialog = document.getElementById("dialog");
-
-				// console.log(popup);
-			};
-			function showDialog() {
-				popup.style.display = "block";
-				dialog.style.display = "block";
-			}
-			function closeDialog() {
-				popup.style.display = "none";
-				dialog.style.display = "none";
-			}
-		</script>
+		<!------------------- member js ------------------->
+		<script src="./js/member.js"></script>
 	</body>
 </html>
