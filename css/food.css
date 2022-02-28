@@ -106,11 +106,8 @@
 .section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* border: 1px solid red; */
     align-items: center;
     justify-content: center; 
-    
-    
 }
 h1{
     text-align: center;
@@ -153,4 +150,16 @@ h1{
     /* font-size: 14px; */
     color: red;
     
+}
+@media screen and (max-width: 768px){
+    .section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center; 
+    }
+    .card{
+        width: 200px;
+        height: 100px;
+    }
 }

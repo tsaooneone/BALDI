@@ -21,12 +21,13 @@ header {
 	font-size: 20px;
 	font-weight: bold;
 	color: white;
+	width: 100%;
 }
 .logo {
 	width: 180px;
-	height: 80px;
 	margin: 0 30px;
 }
+	
 
 /* --- 導覽列 &  搜尋--- */
 .ngb {
@@ -36,15 +37,18 @@ header {
 	align-items: center;
 	justify-content: space-around;
 }
-.ngb > li > a {
+.nav-menu{
+	display: flex;
+	gap: 40px;
+}
+.nav-menu > li > a {
 	display: inline-block;
 	text-decoration: none;
 	color: white;
 	font-size: 20px;
 	padding: 10px;
 }
-
-.ngb .ngb_list:hover a {
+.nav-menu .ngb_list:hover a {
 	background-color: white;
 	border-radius: 10px;
 	color: #e1a84c;
@@ -226,7 +230,7 @@ header {
 	width: 15px;
 }
 /* ======= 登入 & 註冊按鈕 ======= */
-.btn {
+.mb .btn {
 	margin: 20px 0 10px;
 	background-color: #e1a84c;
 	border-style: none;
@@ -259,7 +263,57 @@ header {
 h1 {
 	color: #e1a84c;
 }
-/*-- 頁尾 --*/
+
+/* -- 漢堡 -- */
+.hamburger{
+	display: none;
+	cursor: pointer;
+}
+.bar{
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	transition: all 0.3s ease-in-out;
+	background-color: white;
+}
+.ngb_list{
+	margin: 5px;
+}
+@media screen and (max-width: 768px) {
+	.searchbox{
+		display: none;
+	}
+	.hamburger{
+		display: block;
+	}
+	.hamburger.active .bar:nth-child(2){
+		opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1){
+		transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .bar:nth-child(3){
+		transform: translateY(-8px) rotate(-45deg);
+	}
+	.nav-menu{
+		position: fixed;
+		left: -100%;
+		top: 100px;
+		flex-direction: column;
+		background-color: #e1a84c;
+		width: 100%;
+		z-index: 100;
+		text-align: center;
+		transition: 0.3s;
+		gap: 30px;
+	}
+	.nav-menu.active{
+		left: 0;
+	}
+}
+
+/* -- 頁尾 -- */
 footer {
 	background-color: #e1a84c;
 	/* font-size: 14px; */
@@ -293,4 +347,29 @@ footer li a {
 	text-decoration: none;
 	color: white;
 	margin: 20px;
+}
+@media screen and (max-width: 768px){
+	footer{
+		font-size: 14px;
+	}
+	footer img {
+		width: 100px;
+		height: 50px;
+		margin: 25px;
+	}
+	.boss {
+		width: 150px;
+		margin: 0;
+		margin-left: 100px;
+	}
+	footer ul {
+		display: flex;
+		justify-content: center;
+		margin-left: 10px;
+	}
+	footer li a {
+		text-decoration: none;
+		color: white;
+		margin: 10px;
+	}
 }

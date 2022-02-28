@@ -16,22 +16,31 @@
 		<!------------------- 頁首 ------------------->
 		<header>
 			<ul class="ngb">
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
 				<li>
 					<a href="index.html"
-						><img src="./img/logo_w.svg" alt="BALDI" class="logo"
-					/></a>
+						><img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+					</a>
 				</li>
-				<li class="ngb_list">
-					<a href="index.html">HOME</a>
-				</li>
-				<li class="ngb_list">
-					<a href="food.html">呷88</a>
-				</li>
-				<li class="ngb_list">
-					<a href="wear.html">穿漂亮</a>
-				</li>
-				<li class="ngb_list">
-					<a href="play.html">開心玩</a>
+				<li>
+					<ul class="nav-menu">
+						<li class="ngb_list">
+							<a href="index.html">HOME</a>
+						</li>
+						<li class="ngb_list">
+							<a href="food.html">呷88</a>
+						</li>
+						<li class="ngb_list">
+							<a href="wear.html">穿漂亮</a>
+						</li>
+						<li class="ngb_list">
+							<a href="play.html">開心玩</a>
+						</li>
+					</ul>
 				</li>
 				<!------------------- 搜尋 ------------------->
 				<li class="searchbox">
@@ -201,33 +210,36 @@
 
 		<section class="top">
 			<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+				
+				<!-- <img src="./img/Dogmodel.svg" alt="" class="test-dog"> -->
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img src="./img/clothing/1.png" />
+					<div class="swiper-slide dogmodel">
+						<img src="./img/clothing/7.png" />
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide dogmodel">
 						<img src="./img/clothing/2.png" />
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide dogmodel">
 						<img src="./img/clothing/3.png" />
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide dogmodel">
 						<img src="./img/clothing/4.png" />
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide dogmodel">
 						<img src="./img/clothing/5.png" />
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide dogmodel">
 						<img src="./img/clothing/6.png" />
 					</div>
-					<div class="swiper-slide">
-						<img src="./img/clothing/7.png" />
+					<div class="swiper-slide dogmodel">
+						<img src="./img/clothing/1.png" />
 					</div>
 				</div>
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
 		    </div>
 
+			
 			<div style="width: 50%;">			
 				<!------------------- (右)資訊欄 ------------------->
 				<div class="info">
@@ -243,19 +255,9 @@
 					</select>
 					<br />
 					<!------------------- 加1減1 ------------------->
-					<input
-						type="button"
-						onclick="calc(this, 1)"
-						value="-"
-						class="button"
-					/>
-					<input type="text" value="1" class="text" />
-					<input
-						type="button"
-						onclick="calc(this, -1)"
-						value="+"
-						class="button"
-					/>
+					<button class="btnleft">-</button>
+					<input class="txt" type="text" value="1">
+					<button class="btnright">+</button>
 					<!------------------- 價錢 ------------------->
 					<p class="price">$ 200</p>
 					<!------------------- 加入購物車 ------------------->
@@ -267,7 +269,7 @@
 		<div thumbsSlider="" class="swiper mySwiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-				<img src="./img/clothing/1.png" />
+				<img src="./img/clothing/7.png" />
 			</div>
 			<div class="swiper-slide">
 				<img src="./img/clothing/2.png" />
@@ -285,7 +287,7 @@
 				<img src="./img/clothing/6.png" />
 			</div>
 			<div class="swiper-slide">
-				<img src="./img/clothing/7.png" />
+				<img src="./img/clothing/1.png" />
 			</div>
 			</div>
 		</div>
@@ -323,11 +325,12 @@
 		<!------------------- member js ------------------->
 		<script src="./js/member.js"></script>
 
+		<!--------------------- 加減js --------------------->
+		<script src="./js/add.js"></script>
 		<!--------------------- 衣服js --------------------->
-		<!-- Swiper JS -->
+		<!-- Swiper JS → 衣服輪播-->
 		<script src="./js/swiper-bundle.min.js"></script>
 
-		<!-- Initialize Swiper -->
 		<script>
 			var swiper = new Swiper(".mySwiper", {
 			spaceBetween: 10,
@@ -346,5 +349,7 @@
 			},
 			});
 		</script>
+		<!------------------- humgerber js ------------------->
+		<script src="./js/hamburger.js"></script>
 	</body>
 </html>

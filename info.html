@@ -15,20 +15,31 @@
 		<!------------------- 頁首 ------------------->
 		<header>
 			<ul class="ngb">
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
 				<li>
-					<a href="index.html"><img src="./img/logo_w.svg" alt="BALDI" class="logo" /></a>
+					<a href="index.html"
+						><img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+					</a>
 				</li>
-				<li class="ngb_list">
-					<a href="index.html">HOME</a>
-				</li>
-				<li class="ngb_list">
-					<a href="food.html">呷88</a>
-				</li>
-				<li class="ngb_list">
-					<a href="wear.html">穿漂亮</a>
-				</li>
-				<li class="ngb_list">
-					<a href="play.html">開心玩</a>
+				<li>
+					<ul class="nav-menu">
+						<li class="ngb_list">
+							<a href="index.html">HOME</a>
+						</li>
+						<li class="ngb_list">
+							<a href="food.html">呷88</a>
+						</li>
+						<li class="ngb_list">
+							<a href="wear.html">穿漂亮</a>
+						</li>
+						<li class="ngb_list">
+							<a href="play.html">開心玩</a>
+						</li>
+					</ul>
 				</li>
 				<!------------------- 搜尋 ------------------->
 				<li class="searchbox">
@@ -187,56 +198,43 @@
 			</ul>
 		</header>
 		<!---------------------------------------------------------------------->
-		<section class="top">
 			<!------------------- (左)更衣室 ------------------->
 			<div class="show">
-				<img src="./img/toy/toy9-rebg.png" alt="" />
+				<img src="./img/toy/toy8.png" alt="" />
 				<!------------------- (右)資訊欄 ------------------->
 				<div class="info">
 					<h1>小牛套餐</h1>
 					<p>超值組合<br>
 					    內含:<br>
-					    球球雙節棍、棉線鉛球、<br>
-                        藍莓甜甜圈、美味棉質雞腿...等
+					    棉線小牛一隻
                     </p>
 					<!------------------- 加1減1 ------------------->
-					<input
-						type="button"
-						onclick="calc(this, 1)"
-						value="-"
-						class="button"
-					/>
-					<input type="text" value="1" class="text" />
-					<input
-						type="button"
-						onclick="calc(this, -1)"
-						value="+"
-						class="button"
-					/>
+					<button class="btnleft">-</button>
+					<input class="txt" type="text" value="1">
+					<button class="btnright">+</button>
 					<!------------------- 價錢 ------------------->
 					<p class="price">$ 450</p>
 					<!------------------- 加入購物車 ------------------->
 					<input type="button" value="加入購物車" class="button" />
 				</div>
 			</div>
-		</section>
         <!------------------- 店長推薦專區 ------------------->
         <h1 class="mg">店長推薦<img src="./baldi manager.png" alt=""></h1>
         <div class="recommend">
             <div class="card">
-                <a href="#"><img src="./img/food/food3-rebg.png" alt="" /></a>
+                <a href="./info.html"><img src="./img/food/food2.png" alt="" /></a>
             </div>
             <div class="card">
-                <a href="#"><img src="./img/clothing/6.svg" alt="" /></a>
+                <a href="./info.html"><img src="./img/clothing/6.png" alt="" /></a>
             </div>
             <div class="card">
-                <a href="#"><img src="./img/toy/toy3-rebg.png" alt="" /></a>
+                <a href="./info.html"><img src="./img/toy/toy3.png" alt="" /></a>
             </div>
             <div class="card">
-                <a href="#"><img src="./img/go out/bag3-rebg.png" alt="" /></a>
+                <a href="./info.html"><img src="./img/go_out/bag3.png" alt="" /></a>
             </div>
             <div class="card">
-                <a href="#"><img src="./img/snack/snack7-rebg.png" alt="" /></a>
+                <a href="./info.html"><img src="./img/snack/snack3.png" alt="" /></a>
             </div>
         </div>    
         <!------------------- 頁尾 ------------------->
@@ -271,5 +269,9 @@
 
 		<!------------------- member js ------------------->
 		<script src="./js/member.js"></script>
+		<!------------------- info js ------------------->
+		<script src="./js/add.js"></script>
+		<!------------------- humgerber js ------------------->
+		<script src="./js/hamburger.js"></script>
 	</body>
 </html>

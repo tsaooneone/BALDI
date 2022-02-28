@@ -1,120 +1,115 @@
 /* --- 選購商品區 --- */
-.up{
-    width: 900px;
-    margin: 0 auto;
-    border-bottom: 5px solid black;
-}
-.up > div{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+table{
+    border-collapse: collapse;  
+    width: 70%;
+    margin: 20px auto;
+    border: 3px solid white;
     background-color: #E1A84C;
-    border-radius: 10px;
-    margin: 30px;
-    font-weight: bold;
     color: white;
 }
-/*-- 商品img --*/
-.up .commodity{
-    width: 150px;
+.title{
+    font-size: 14px;
+    background-color: #E1A84C;
+    color: white;
+}
+.checkbox{
+    width: 50px;
+}
+.commodity{
+    width: 120px;
+    margin-left: 50px;
     background-color: white;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 5px;
+    border-radius: 5px;
 }
-.shangpin{
-    width: 200px;
-}
-.shangpin a{
+.word{
+    width: 86px;
+    font-size: 14px;
     color: white;
     display: inline-block;
-    width: 50%;
+    text-decoration: none;
+    margin-top: 60px;
+    font-weight: bold;
 }
-.shangpin span.price{
-    width: 50%;
-    font-weight: normal;
-    color: white;
-    margin-left: 10px;
-}
-/*-- 加1減1 --*/
-.text{
-    width: 40px;
+td{
+    background-color: #E1A84C;
+    padding: 10px 0;
+    min-width: 140px;
     text-align: center;
-    border-style: none;
-    /* border-radius: 5px; */
+    /* border: 1px solid white; */
 }
-.button{
-    background-color: white;
-    border-radius: 3px;
-    border-color: white;
+.price{
+    font-weight: bold;
+    color: black;
 }
-/*-- 移除的垃圾桶icon --*/
-.up .garbagecan{
+.totle{
+    font-weight: bold;
+    color: red;
+}
+.garbagecan{
     width: 30px;
     height: 30px;
-    cursor: pointer;
+    cursor: pointer  ;
 }
-/*-- total --*/
-.total{
-    width: 900px;
-    margin: 0 auto;
-    text-align: right;
-    padding: 20px;
-}
-.total span{
-    font-size: 18px;
-    color: red;
-    font-weight: bold;
-    margin: 80px;
-}
-/*-- 付款方式 & 收件人資料 --*/
-.down{
-    width: 900px;
-    margin: 0 auto;
-    padding: 10px;
-}
-.down h1{
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    margin: 20px;
-}
-.down .pay{
-    margin: 0 30px 10px;
-    padding: 10px;
-    line-height: 1.6;
-    background-color: #E1A84C;
-    border-radius: 10px;
-    display: flex;
-}
-.pay label{
-    margin-top: 45px;
-    color: white;
+tr{
+    border: 2px solid white;
+    background-color: #f6f6f6;
 }
 .pay input{
-    margin-top: 50px;
-}
-.send{
-    margin: 0 auto;
-}
-.send label{
-    color: white;
-    margin-left: 40px;
-}
-.send input{
     margin: 10px;
-    width: 200px;
+}
+.pay h1{
+    color: white;
+    font-size: 20px;
+}
+.btn button{
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border-style: none;
+    border-color: white;
+    color: #E1A84C;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn input{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+.buybtn button{
+    border-color: white;
+    color: #E1A84C;
+    font-weight: bold;
     border-style: none;
     border-radius: 5px;
+    padding: 5px;
 }
-/*-- 買單按鈕 --*/
-.down button{
-    display: block;
-    margin: 0 auto;
-    background-color: #E1A84C;
-    border-radius: 5px;
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    border-color: #E1A84C;
+@media screen and (max-width: 768px){
+    table{
+        width: 40%;
+    }
+    td{
+        min-width: 110px;
+        vertical-align: middle;
+    }
+    .commodity{
+        width: 100px;
+        margin-left: 10px;
+    }
+    .word{
+        width: 100%;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .pay h1{
+        font-size: 18px;
+    }
+    .pay label{
+        font-size: 14px;
+    }
+    .pay label{
+        display: block;
+        text-align: left;
+    }
 }

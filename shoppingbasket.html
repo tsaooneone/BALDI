@@ -14,20 +14,31 @@
 		<!------------------- 頁首 ------------------->
 		<header>
 			<ul class="ngb">
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
 				<li>
-					<a href="index.html"><img src="./img/logo_w.svg" alt="BALDI" class="logo" /></a>
+					<a href="index.html"
+						><img src="./img/logo_w.svg" alt="BALDI" class="logo" />
+					</a>
 				</li>
-				<li class="ngb_list">
-					<a href="index.html">HOME</a>
-				</li>
-				<li class="ngb_list">
-					<a href="food.html">呷88</a>
-				</li>
-				<li class="ngb_list">
-					<a href="wear.html">穿漂亮</a>
-				</li>
-				<li class="ngb_list">
-					<a href="play.html">開心玩</a>
+				<li>
+					<ul class="nav-menu">
+						<li class="ngb_list">
+							<a href="index.html">HOME</a>
+						</li>
+						<li class="ngb_list">
+							<a href="food.html">呷88</a>
+						</li>
+						<li class="ngb_list">
+							<a href="wear.html">穿漂亮</a>
+						</li>
+						<li class="ngb_list">
+							<a href="play.html">開心玩</a>
+						</li>
+					</ul>
 				</li>
 				<!------------------- 搜尋 ------------------->
 				<li class="searchbox">
@@ -184,84 +195,101 @@
 			</ul>
 		</header>
         <!------------------- 選購商品區 ------------------->
-		<section class="up">
-			<!------------------- 第1個商品 ------------------->
-			<div>
-				<img src="./img/food/food5.png" alt="" class="commodity"/>
-				<div class="shangpin">
-				<a href="">脆脆餅 1000g</a>
-				<span class="price">$ 1000</span> 
-				</div>
-                <!------------------- 加1減1 ------------------->
-                <div>
-			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
-				    <input type="text" value="1" class="text" />
-				    <input type="button" onclick="calc(this, -1)" value="+" class="button"/>
-                </div>
+		<table>
+			<tr class="title">
+				<td><input type="checkbox" class="ckbox">全選</td>
+				<td>商品資訊</td>
+				<td>單價</td>
+				<td>數量</td>
+				<td>金額</td>
+				<td>移除</td>
+			</tr>
+			<!--====================== 第1個商品 ======================-->
+			<tr id="prod1">
+				<td class="checkbox"><input type="checkbox" class="ckbtn"></td>
+				<td>
+					<img src="./img/food/food5.png" alt="" class="commodity" align="left"/>
+					<a href="./info.html" class="word">脆脆餅 1000g</a>
+				</td>
+				<td><span class="price" data-price="1000">$ 1000</span></td>
+				<!------------------- 加1減1 ------------------->
+				<td class="btn">
+					<button class="btnleft">-</button>
+					<input class="txt" type="text" value="1">
+					<button class="btnright">+</button>
+				</td>
 				<!------------------- 總計金額 ------------------->
-                <span>$ 1000</span>
+				<td><span class="totle" data-totle="1000">$1000</span></td>
 				<!------------------- 垃圾桶 ------------------->
-                <img src="./img/icon/garbage-can_w.png" alt="" class="garbagecan">
-			</div>
-
-			<!------------------- 第2個商品 ------------------->
-            <div>
-				<img src="./img/toy/toy8.png" alt="" class="commodity"/>
-				<div class="shangpin">
-				<a href="info.html">小牛玩偶</a>
-				<span class="price">$ 450</span>
-				</div>
-                <!------------------- 加1減1 ------------------->
-				<div>
-			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
-				    <input type="text" value="1" class="text" />
-				    <input type="button" onclick="calc(this, -1)" value="+" class="button"/>
-                </div>
+				<td><img src="./img/icon/garbage-can_w.png" alt="" onclick="deleteCart('prod1')" class="garbagecan"></td>
+			</tr>
+            <!--====================== 第2個商品 ======================-->
+			<tr id="prod2">
+				<td class="checkbox"><input type="checkbox" class="ckbtn"></td>
+				<td>
+					<img src="./img/toy/toy8.png" alt="" class="commodity" align="left"/>
+					<a href="info.html" class="word">小牛玩偶</a>
+				</td>
+				
+				<td><span class="price" data-price="450">$ 450</span></td>
+				<!------------------- 加1減1 ------------------->
+				<td class="btn">
+					<button class="btnleft">-</button>
+					<input class="txt" type="text" value="1">
+					<button class="btnright">+</button>
+				</td>
 				<!------------------- 總計金額 ------------------->
-                <span>$ 450</span>
+                <td><span class="totle" data-totle="450">$450</span></td>
 				<!------------------- 垃圾桶 ------------------->
-                <img src="./img/icon/garbage-can_w.png" alt="" class="garbagecan">
-			</div>
-
-			<!------------------- 第3個商品 ------------------->
-            <div>
-				<img src="./img/clothing/4.png" alt="" class="commodity"/>
-				<div class="shangpin">
-				<a href="">綠色閃電</a>
-				<span class="price">$ 100</span>
-				</div>
+				<td><img src="./img/icon/garbage-can_w.png" alt="" onclick="deleteCart('prod2')" class="garbagecan"></td>
+			</tr>
+			<!--====================== 第3個商品 ======================--->
+            <tr id="prod3">
+				<td class="checkbox"><input type="checkbox" class="ckbtn"></td>
+				<td>
+					<img src="./img/clothing/4.png" alt="" class="commodity" align="left"/>
+					<a href="./info.html" class="word">綠色閃電</a>
+				</td>
+				<td><span class="price" data-price="100">$ 100</span></td>
                 <!------------------- 加1減1 ------------------->
-				<div>
-			        <input type="button" onclick="calc(this, 1)" value="-" class="button"/>
-				    <input type="text" value="1" class="text" />
-				    <input type="button" onclick="calc(this, -1)" value="+" class="button"/>
-                </div>
+				<td class="btn">
+					<button class="btnleft">-</button>
+					<input class="txt" type="text" value="1">
+					<button class="btnright">+</button>
+				</td>
 				<!------------------- 總計金額 ------------------->
-                <span>$ 100</span>
+                <td><span class="totle" data-totle="100">$100</span></td>
 				<!------------------- 垃圾桶 ------------------->
-                <img src="./img/icon/garbage-can_w.png" alt="" class="garbagecan">
-			</div>
-		</section>
-		<!------------------- 總金額 ------------------->
-        <div class="total">
-            <span>$ 1550</span>
-        </div>
-		<!------------------- 付款方式 & 收件人資料 ------------------->
-        <section class="down">
-            <div class="pay">
-                <h1>付款方式</h1>
-                <input type="radio" name="pay" value="pay_a"><label>貨到付款</label><br>
-                <input type="radio" name="pay" value="pay_b"><label>銀行轉帳</label><br>
-                <input type="radio" name="pay" value="pay_c"><label>信用卡/VISA金融卡</label>
-                <div class="send">
-                    <h1>寄送資訊</h1>
-                    <label for="username">收件人姓名:</label><input type="text" id="username" name="username"><br>
-                    <label for="phone_number">收件人電話:</label><input type="text" id="phone_number"><br>
-                    <label for="address">收件人地址:</label><input type="text" id="address" name="address">
-                </div>
-            </div>
-            <button>買單</button>
-        </section>
+                <td><img src="./img/icon/garbage-can_w.png" alt="" onclick="deleteCart('prod3')" class="garbagecan"></td>
+			</tr>
+			<tr>
+				<!------------------- 總數量 ------------------->
+				<td><input type="checkbox" class="ckbox">全選</td>
+				<td colspan="2">已選商品<span class="number">0</span>件</td>
+				<!------------------- 總金額結算 ------------------->
+				<td></td>
+				<td>合計：<span class="totleprice">0</span>元</td>
+			</tr>
+			<!------------------- 付款方式 & 收件人資料 ------------------->
+			<tr class="pay">
+				<td colspan="1"><h1>付款方式</h1></td>
+				<td colspan="2">
+					<label><input type="radio" name="pay" value="pay_a">貨到付款</label>
+					<label><input type="radio" name="pay" value="pay_b">銀行轉帳</label>
+					<label><input type="radio" name="pay" value="pay_c">信用卡/VISA金融卡</label>
+				</td>
+				<td colspan="1"><h1>寄送資訊</h1></td>
+				<td colspan="2">
+					<label for="username">收件人姓名: <input type="text" id="username" name="username"></label>
+					<label for="address">收件人地址: <input type="text" id="address" name="address"></label>
+					<label for="phone_number">收件人電話: <input type="text" id="phone_number"></label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" class="buybtn"><button>買單</button></td>
+			</tr>
+		</table>
+        
 		<!------------------- 頁尾 ------------------->
 		<footer>
 			<!------------------- 左 ------------------->
@@ -294,5 +322,18 @@
 
 		<!------------------- member js ------------------->
 		<script src="./js/member.js"></script>
+
+		<!------------------- shangpin js ------------------->
+		<script src="./js/shangpin.js"></script>
+		<!------------------- garbagecan js ------------------->
+		<script>
+			function deleteCart(prod){
+				let el = document.getElementById(prod);
+				// console.log(el);
+				el.remove();
+			};
+		</script>
+		<!------------------- humgerber js ------------------->
+		<script src="./js/hamburger.js"></script>
 	</body>
 </html>
