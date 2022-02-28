@@ -119,6 +119,7 @@ select{
     background-position-x: 53%;
     background-position-y: 81%;
 }
+
 @media screen  and (max-width: 768px){
     .info{
         width: 60%;
