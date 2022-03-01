@@ -16,6 +16,10 @@ select{
     margin: 20px auto 10px;
     text-align: center;
     text-align-last: center;
+    background-color: #E1A84C;
+    color: white;
+    border: 1px solid #E1A84C;
+    border-radius: 3px;
 }
 /*-- 加1減1 --*/
 .txt{
