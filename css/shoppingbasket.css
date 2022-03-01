@@ -53,7 +53,7 @@ td > label{
 .garbagecan{
     width: 30px;
     height: 30px;
-    cursor: pointer  ;
+    cursor: pointer ;
 }
 tr{
     border: 2px solid white;
@@ -88,6 +88,22 @@ tr{
     border-style: none;
     border-radius: 5px;
     padding: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px){
+	td {
+        min-width: 30px;
+      }
+	.commodity {
+		width: 60px;
+	}
+	.garbagecan {
+		width: 20px;
+		height: 20px;
+	}
+    .price {
+        font-size: 12px;
 }
 
 @media screen and (min-width: 576px) and (max-width: 767.98px){
@@ -101,16 +117,17 @@ tr{
         margin-top: 10px;
     }
 }
+
 @media screen and (max-width: 768px){
     table{
         width: 40%;
     }
     td{
-        min-width: 80px;
+        min-width: 35px;
         vertical-align: middle;
     }
     .commodity{
-        width: 100px;
+        width: 60px;
         margin-left: 10px;
     }
     .word{
@@ -129,7 +146,9 @@ tr{
         text-align: left;
     }
 }
+
 @media screen and (min-width: 768px) and (max-width: 991.98px){
+    
     table{
         width: 50%;
     }
@@ -154,6 +173,5 @@ tr{
         min-width: 140px;
         text-align: center;
         vertical-align: middle;
-        /* border: 1px solid white; */
     }
 }

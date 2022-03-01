@@ -1,4 +1,3 @@
-
 /*-- (右)資訊欄 --*/
 .info{
     width: 50%;
@@ -121,11 +120,8 @@ select{
 }
 
 @media screen  and (max-width: 768px){
-    .info{
-        width: 60%;
-        padding: 10px;
-    
-        line-height: 1.6;
+    .info {
+        width: 100%;
     }
     .mySwiper .swiper-slide img {
         width: 90%;
@@ -137,9 +133,17 @@ select{
         background-size: 40%;
     }
     .info h1{
-        font-size: 18px;
+        font-size: 14px;
     }
     .info p{
-        font-size: 14px;
+        font-size: 12px;
+    }
+    select {
+    width: 70px;
+    margin: 30px auto 10px;
+    }
+    .txt {
+        width: 30px;
+        margin-left: 1px;
     }
 }

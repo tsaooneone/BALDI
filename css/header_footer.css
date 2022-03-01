@@ -281,6 +281,11 @@ h1 {
 	margin: 5px;
 }
 
+@media screen and (max-width: 575.98px){
+    .logo{
+		width: 150px;
+	}
+}
 
 @media screen and (max-width: 768px) {
 	.searchbox{
@@ -312,6 +317,9 @@ h1 {
 	}
 	.nav-menu.active{
 		left: 0;
+	}
+	.out{
+		width: 350px;
 	}
 }
 
