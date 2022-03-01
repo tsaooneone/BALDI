@@ -281,13 +281,15 @@ h1 {
 	margin: 5px;
 }
 
-@media screen and (max-width: 575.98px){
-    .logo{
-		width: 150px;
-	}
-}
-
 @media screen and (max-width: 768px) {
+	.logo{
+		width: 150px;
+		margin: 0px 30px;
+	}
+	.mbi {
+		height: 40px;
+		width: 40px;
+	}
 	.searchbox{
 		display: none;
 	}
@@ -321,6 +323,7 @@ h1 {
 	.out{
 		width: 350px;
 	}
+	
 }
 
 @media screen and (min-width: 768px) and (max-width: 991.98px){
