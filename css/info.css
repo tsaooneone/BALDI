@@ -34,6 +34,9 @@
 }
 .info > button{
     width: 20px;
+    background-color: #E1A84C;
+    border: 1px solid #E1A84C;
+    color: white;
 }
 .button{
     background-color: #E1A84C;
@@ -88,12 +91,19 @@
         height: 100px;
     }
     .card img{
-        width: 90px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
         margin-left: 10px;
     }
     .mg{
         font-size: 20px;
-        margin: 10% 0 0 15%;
+        margin: 15% 0 0 5%;
+    }
+    .info{
+        padding: 0;
+    }
+    .show img {
+        width: 240px;
+        height: 240px;
     }
 }
