@@ -152,15 +152,16 @@ h1{
 @media screen and (max-width: 768px){
     .section{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-content: center; 
+        margin-bottom: 10px;
     }
     .card{
-        width: 200px;
-        height: 100px;
+        width: 100px;
+        height: 75px;
     }
     .card img{
-        width: 100px;
+        width: 70px;
     }
 }
