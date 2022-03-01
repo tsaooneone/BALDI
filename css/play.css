@@ -152,7 +152,7 @@ h1{
 @media screen and (max-width: 768px){
     .section{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         align-items: center;
         justify-content: center; 
     }
