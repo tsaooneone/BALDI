@@ -157,11 +157,15 @@ h1{
         justify-content: center; 
         margin-bottom: 10px;
     }
-    .card{
+    .card {
         width: 100px;
-        height: 75px;
+        height: 105px;
+        margin: 50px;
     }
     .card img{
-        width: 70px;
+        width: 90px;
+    }
+    .name {
+        font-size: 14px;
     }
 }
