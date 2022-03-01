@@ -24,11 +24,16 @@ select{
 }
 .info button{
     width: 20px;
+    color: white;
+    background-color: #E1A84C;
+    border: #E1A84C;
+    border-style: none;
 }
 .button{
     background-color: #E1A84C;
     border-radius: 5px;
     border-color: #E1A84C;
+    color: white;
 }
 /*-- 價錢 --*/
 .info .price{
